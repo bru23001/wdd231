@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Course home page for Web and Computer Programming Certificate">
+    <meta name="author" content="Your Name">
+    <title>Course Home Page</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="profile-info">
+            <h1>Victor J. Brun</h1>
+            <img src="images/IMG_3935.JPG" alt="Profile Picture"
+                class="profile-pic">
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <button class="hamburger"
+            aria-label="Toggle navigation">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="chanber.html">Chamber</a></li>
+            <li><a href="github.html">GitHub Profile</a></li>
+            <li><a href="linkedin.html">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="cards-container">
+            <section class="card left-card">
+                <h2 class="card-header">Course Work</h2>
+                <div class="card-content">
+                    <ul>
+                        <li>Course 1</li>
+                        <li>Course 2</li>
+                        <li>Course 3</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="card right-card">
+                <h2 class="card-header">Sevilla, Spain</h2>
+                <div class="card-content">
+                    <figure>
+                        <img src="images/Plaza de España-GettyImages-917378502.webp"
+                            alt="Sevilla Image">
+                        <figcaption>Beautiful view of Sevilla</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </div>
+        <section class="card certificate-card">
+            <h2 class="card-header">Web and Computer Programming Certificate</h2>
+            <div class="card-content">
+                <div class="filter-buttons">
+                    <button onclick="displayCourses('all')">All</button>
+                    <button onclick="displayCourses('CSE')">CSE</button>
+                    <button onclick="displayCourses('WDD')">WDD</button>
+                </div>
+                <hr>
+                <div class="course-grid">
+                    <button class="course-button">CSE 110</button>
+                    <button class="course-button">WDD 130</button>
+                    <button class="course-button">CSE 111</button>
+                    <button class="course-button">CSE 210</button>
+                    <button class="course-button">WDD 131</button>
+                    <button class="course-button">WDD 231</button>
+                </div>
+            </div>
+                <p id="totalCredits">Total Credits: 0</p>
+        </section>
+    </main>
+    <footer>
+        <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
