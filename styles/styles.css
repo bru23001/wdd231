@@ -18,6 +18,7 @@
 
 
 body {
+    background-color: var(--background1);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -96,7 +97,7 @@ h2 {
 }
 
 .main {
-    padding: 1rem;
+    padding: 2rem;
 }
 
 section {
@@ -178,7 +179,7 @@ figure {
 
 .filter-buttons button {
     background-color: var(--red3);
-    color: white;
+    color: black;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -205,8 +206,8 @@ hr {
 }
 
 .course-button {
-    background-color: var(--blue1);
-    color: white;
+    background-color: var(--red3);
+    color: black;
     border: none;
     padding: 0.75rem;
     border-radius: 5px;
@@ -215,7 +216,7 @@ hr {
 }
 
 .course-button:hover {
-    background-color: var(--yellow1);
+    background-color: var(--red1);
     color: black;
 }
 figure img {
@@ -228,13 +229,13 @@ figcaption {
     font-style: italic;
 }
 .completed {
-    background-color: var(--yellow3);
+    background-color: rgb(195, 194, 194);
     color: #000;
 }
 
 footer {
     background-color: var(--blue1);
-    color: #ffffff;
+    color: white;
     text-align: center;
     padding: 1rem 0;
     margin-top: 1rem;
