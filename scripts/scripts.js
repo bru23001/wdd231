@@ -93,7 +93,7 @@ function displayCourses(filter) {
     document.getElementById('totalCredits').textContent = `Total Credits: ${totalCredits}`;
 }
 
-const hamButton = document.querySelector("#menu");
+const hamButton = document.querySelector(".hamburger");
 const navigation = document.querySelector("nav"); 
 
 hamButton.addEventListener("click", () => {
