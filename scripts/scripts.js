@@ -93,10 +93,37 @@ function displayCourses(filter) {
     document.getElementById('totalCredits').textContent = `Total Credits: ${totalCredits}`;
 }
 
-const hamButton = document.querySelector(".hamburger");
+document.addEventListener("DOMContentLoaded", () => {
+    const hamButton = document.querySelector("#menu"); // Targeting by ID now
+    const navigation = document.querySelector(".nav-bar");
+
+    if (hamButton && navigation) {
+        hamButton.addEventListener("click", () => {
+            navigation.classList.toggle("open");
+            const isOpen = navigation.classList.contains("open");
+            hamButton.textContent = isOpen ? "\u2716" : "\u2261"; // "X" and "≡"
+        });
+    } else {
+        console.error("Hamburger button or navigation bar not found in the DOM.");
+    }
+    
+});/* document.addEventListener("DOMContentLoaded", () => {
+    const hamButton = document.querySelector(".hamburger");
+    const navigation = document.querySelector(".nav-bar");  
+
+    if (hamButton && navigation) {  
+        hamButton.addEventListener("click", () => {
+            navigation.classList.toggle("open"); 
+            hamButton.textContent = navigation.classList.contains("open") ? "✖" : "≡"; 
+        });
+    } else {
+        console.error("Hamburger button or navigation bar not found in the DOM.");
+    }
+});
+ *//* const hamButton = document.querySelector(".hamburger");
 const navigation = document.querySelector("nav-bar"); 
 
 hamButton.addEventListener("click", () => {
     navigation.classList.toggle("open"); 
     hamButton.textContent = navigation.classList.contains("open") ? "✖" : "≡"; 
-});
+}); */

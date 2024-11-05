@@ -15,6 +15,9 @@
     --background2: #f8f6fc;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: var(--background1);
@@ -66,8 +69,19 @@ h2 {
 }
 
 
-.hamburger {
+
+
+
+#menu {
     display: none;
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
 }
 
 .nav-links {
@@ -244,12 +258,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hamburger {
+    #menu {
         display: block;
         font-size: 2rem;
         background: none;
         border: none;
-        color: white;
+        color: black;
         cursor: pointer;
     }
 
@@ -284,10 +298,13 @@ footer {
         flex: 1; 
     }
 
+
     .course-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
+    
 
     .certificate-card {
         margin: 1rem;
