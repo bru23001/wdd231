@@ -60,7 +60,7 @@ h2 {
 }
 
 .nav-bar {
-    background-color: grey; 
+    background-color: #454545; 
     display: flex;
     justify-content: center;
     padding: 1rem 0;
