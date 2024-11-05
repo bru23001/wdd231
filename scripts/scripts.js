@@ -69,15 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function displayCourses(filter) {
     const courseContainer = document.querySelector('.course-grid');
-    courseContainer.innerHTML = ''; // Clear the container before displaying new content
+    courseContainer.innerHTML = ''; 
 
-    // Filter courses based on the selected filter
+    // Filter and display courses
     let filteredCourses = courses;
     if (filter !== 'all') {
         filteredCourses = courses.filter(course => course.subject === filter);
     }
 
-    // Display each course as a button and mark completed courses differently
+    // Display each course and mark completed courses in light grey
     filteredCourses.forEach(course => {
         const courseButton = document.createElement('button');
         courseButton.classList.add('course-button');
@@ -94,7 +94,7 @@ function displayCourses(filter) {
 }
 
 const hamButton = document.querySelector(".hamburger");
-const navigation = document.querySelector("nav"); 
+const navigation = document.querySelector("nav-bar"); 
 
 hamButton.addEventListener("click", () => {
     navigation.classList.toggle("open"); 
