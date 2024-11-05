@@ -233,6 +233,12 @@ figcaption {
     color: #000;
 }
 
+#totalCredits {
+    text-align: center;
+    margin-top: 1rem; 
+    font-weight: bold;
+}
+
 footer {
     background-color: var(--blue1);
     color: white;
