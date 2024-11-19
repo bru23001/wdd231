@@ -1,0 +1,101 @@
+[
+    {
+        "name": "Acciona",
+        "subtitle": "Soluciones Sostenibles",
+        "address": "123 Sustainability Ave, Madrid, Spain",
+        "phone": "800-555-1234",
+        "website": "https://acciona.com",
+        "email": "info@acciona.com",
+        "image": "images/logo-ACCIONA_positivo-1024x540.jpg",
+        "membershipLevel": 3,
+        "industry": "Energy and Infrastructure"
+    },
+    {
+        "name": "Airbus Defence & Space",
+        "subtitle": "Sector Aeroespacial",
+        "address": "456 Innovation Blvd, Toulouse, France",
+        "phone": "800-555-5678",
+        "website": "https://airbusgroup.com",
+        "email": "info@airbus.com",
+        "image": "images/logo_airbus_180.jpg",
+        "membershipLevel": 3,
+        "industry": "Aerospace"
+    },
+    {
+        "name": "Costco",
+        "subtitle": "Club de Precios",
+        "address": "789 Wholesale Rd, Madrid, Spain",
+        "phone": "800-555-9101",
+        "website": "https://costco.es",
+        "email": "info@costco.es",
+        "image": "images/costco_180_0.jpg",
+        "membershipLevel": 2,
+        "industry": "Retail"
+    },
+    {
+        "name": "10Code",
+        "subtitle": "Software",
+        "address": "12 Digital Ln, Valencia, Spain",
+        "phone": "800-555-9101",
+        "website": "https://10code.es",
+        "email": "info@10code.es",
+        "image": "images/10code.jpg",
+        "membershipLevel": 1,
+        "industry": "Technology"
+    },
+    {
+        "name": "GM Technology",
+        "subtitle": "ECO Print Solutions",
+        "address": "34 Greenway, Seville, Spain",
+        "phone": "800-555-9101",
+        "website": "https://gmtechnology.es",
+        "email": "info@gmtechnology.es",
+        "image": "images/gm.png",
+        "membershipLevel": 2,
+        "industry": "Printing Solutions"
+    },
+    {
+        "name": "Iberia",
+        "subtitle": "Aerolineas Españolas",
+        "address": "56 Flight Path, Madrid, Spain",
+        "phone": "800-555-9101",
+        "website": "https://iberia.com",
+        "email": "info@iberia.com",
+        "image": "images/iberia.jpg",
+        "membershipLevel": 3,
+        "industry": "Airlines"
+    },
+    {
+        "name": "Nextwind",
+        "subtitle": "Consulting",
+        "address": "78 Strategy St, Barcelona, Spain",
+        "phone": "800-555-9101",
+        "website": "https://nextwind.es",
+        "email": "info@nextwind.es",
+        "image": "images/nextwind.png",
+        "membershipLevel": 1,
+        "industry": "Consulting"
+    },
+    {
+        "name": "Softcom",
+        "subtitle": "Ciberseguridad",
+        "address": "90 Cybersecurity Ln, Seville, Spain",
+        "phone": "800-555-9101",
+        "website": "https://softcom.es",
+        "email": "info@softcome.es",
+        "image": "images/softcom.jpg",
+        "membershipLevel": 2,
+        "industry": "Cybersecurity"
+    },
+    {
+        "name": "Teknei",
+        "subtitle": "Tecnologia e Informacion",
+        "address": "123 Tech Blvd, Madrid, Spain",
+        "phone": "800-555-9101",
+        "website": "https://teknei.es",
+        "email": "info@teknei.es",
+        "image": "images/teknei.png",
+        "membershipLevel": 1,
+        "industry": "Information Technology"
+    }
+]
