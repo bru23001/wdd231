@@ -1,12 +1,10 @@
 :root {
-    --background-color: #f4f4f4;
-    --primary-color: #01345b;
-    --secondary-color: #5ce0d8;
-    --accent-color: #ffcf43;
-    --text-color: #333;
+    --background-color: #fffcff;
+    --primary-color: #247ba0;
+    --accent-color: #c3b299;
+    --text-color: #50514F;
     --border-color: #aaa;
-    --card-background: #e0e0e0;
-    --header-background: #ccc;
+    --card-background: #cbd4c2;
 }
 
 
@@ -274,37 +272,45 @@ nav ul li a:hover {
 /* Hero Section Styling */
 .hero {
     position: relative;
-    background-image: url('../images/plaza-espana.webp');
+    background-image: url('../images/seville.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
+    height: 400px;
     width: 100%;
-    margin-top: 20px;
     color: white;
-    text-align: center;
-    padding: 20px;
     overflow: hidden;
 }
-
 .hero-content {
-    position: relative;
-    width: 90%;
-    max-width: 90%;
-    margin: auto;
-    text-align: center;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    margin: 20px; 
+    text-align: left; 
+    color: white; 
 }
 
-.keynote-button {
-    position: absolute;
+.hero h3 {
+    color: var(--background-color);
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.hero h2 {
+    color: var(--background-color);
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 20px;
+
+}
+
+.keynote-button,
+.button {
     bottom: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: var(--accent-color);    
-    color: #333;
+    background-color: var(--primary-color);    
+    color: var(--background-color);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -313,7 +319,15 @@ nav ul li a:hover {
 }
 
 .keynote-button:hover {
-    background-color: #ffcf43;
+    background-color: var(--accent-color);
+}
+
+.view-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.join-button:hover {
+    background-color: var(--accent-color);
 }
 
 .current-weather {
@@ -322,7 +336,8 @@ nav ul li a:hover {
 
 /*Current Weather and Forecast Styling */
 .current-weather,
-.weather-forecast {
+.weather-forecast,
+.join-chamber {
     background-color: var(--card-background);    
     padding: 15px;
     border-radius: 5px;
@@ -332,7 +347,8 @@ nav ul li a:hover {
 
 .events h3,
 .current-weather h3,
-.weather-forecast h3 {
+.weather-forecast h3,
+.join-chamber h3 {
     background-color: #333;
     color: #fff;
     padding: 10px;
@@ -372,6 +388,7 @@ nav ul li a:hover {
 .forecast-item p {
     margin: 0;
 }
+
 
 /* Business Directory Styling */
 #business-directory {
@@ -433,8 +450,8 @@ button {
     margin: 10px auto;
     padding: 10px 20px;
     font-size: 16px;
-    color: #fff;
-    background-color: #ffcf43;
+    color: var(--background-color);
+    background-color: var(--primary-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;

@@ -1,16 +1,21 @@
 // Function to fetch and display companies from a JSON file
 async function displayCompanies() {
-    const businessList = document.querySelector('.business-cards'); 
-    businessList.innerHTML = ''; 
+    const businessList = document.querySelector('.business-cards');
+    businessList.innerHTML = '';
 
     try {
         // Fetch data from the JSON file
         const response = await fetch('scripts/businesses.json');
         const companies = await response.json();
 
+        // Determine the current page
+        const isIndexPage = window.location.pathname.includes('index.html');
+
+        // Limit to 3 companies if on index.html, otherwise show all
+        const companiesToDisplay = isIndexPage ? companies.slice(0, 3) : companies;
+
         // Iterate over each company in the JSON data
-        companies.forEach(company => {
-            // Create the business card HTML for each company
+        companiesToDisplay.forEach(company => {
             const companyCard = document.createElement('div');
             companyCard.classList.add('card');
             companyCard.innerHTML = `
@@ -22,10 +27,8 @@ async function displayCompanies() {
                     <p><strong>Phone:</strong> ${company.phone}</p>
                     <p><strong>Email:</strong> <a href="mailto:${company.email}">${company.email}</a></p>
                     <p><strong>Website:</strong> <a href="${company.website}" target="_blank">${company.website}</a></p>
-                    <p><strong>Membership Level:</strong> ${getMembershipLevel(company.membershipLevel)}</p>
                 </div>
             `;
-            // Append each card to the business list container
             businessList.appendChild(companyCard);
         });
     } catch (error) {
@@ -50,7 +53,7 @@ function getMembershipLevel(level) {
 // Call displayCompanies when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     displayCompanies();
-    
+
     const gridBtn = document.getElementById('grid');
     const listBtn = document.getElementById('list');
     const businessCards = document.querySelector('.business-cards');
@@ -73,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('show');
         header.classList.toggle('menu-open');
-        menuToggle.setAttribute('aria-expanded', 
+        menuToggle.setAttribute('aria-expanded',
             menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
         );
     });
