@@ -11,6 +11,7 @@
     <link rel="icon" href="favicon.ico" type="image/favicon.ico">
     <link rel="stylesheet" href="styles/chamber.css">
     <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
 
     <meta property="og:title"
         content="Seville Chamber of Commerce Business Directory">
@@ -62,7 +63,9 @@
                         2024</p>
                     <p><strong>Annual Commerce Gala:</strong> December 10, 2024
                     </p>
-                    <button class="keynote-button" title="Click to purchase keynote tickets">Keynote Tickets</button>        
+                    <button class="keynote-button"
+                        title="Click to purchase keynote tickets">Keynote
+                        Tickets</button>
 
                 </div>
             </section>
@@ -71,13 +74,12 @@
                 <h3>Current Weather</h3>
                 <div class="weather-content">
                     <div class="weather-icon">
-                        <img src="images/1100758.webp" alt="Weather Icon">
+                        <img id="weather-icon" src="images/1100758.webp"
+                            alt="Weather Icon">
                     </div>
                     <div class="weather-data">
-                        <p class="temperature">75°F</p>
-                        <p>Sunny</p>
-                        <p>High: 80°F, Low: 60°F</p>
-                        <p>Humidity: 40%</p>
+                        <p>Temperature: <span id="current-temp"></span></p>
+                        <p>Weather: <span id="current-desc"></span></p>
                     </div>
                 </div>
             </section>
@@ -90,15 +92,8 @@
                         resources, and events.</p>
                     <button class="join-button" title="Join the Chamber">Join
                         the Chamber</button>
+                </div>
             </section>
-
-        </div>
-        </section>
-        </div>
-
-
-        </section>
-        </div>
 
         <section class="company-spotlights">
             <h3>Company Spotlights</h3>
