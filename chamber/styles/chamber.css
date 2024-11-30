@@ -24,12 +24,12 @@ body {
     margin: 20px;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden; 
+    overflow-x: hidden;
     width: calc(100% - 40px);
 }
 
 img {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
     display: block;
 }
@@ -65,11 +65,12 @@ header {
 
 h1 {
     font-size: 1.2rem;
-    color: var(--primary-color);    
+    color: var(--primary-color);
     font-weight: normal;
     display: flex;
     align-items: center;
 }
+
 .nav-menu {
     list-style: none;
     display: flex;
@@ -77,6 +78,7 @@ h1 {
     margin: 0;
     padding: 0;
 }
+
 .nav-menu li a {
     text-decoration: none;
     color: var(--text-color);
@@ -110,13 +112,14 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--text-color);    
+    color: var(--text-color);
     font-weight: 500;
 }
 
 nav ul li a:hover {
     color: var(--border-color);
 }
+
 .dark-mode {
     background-color: #333;
     color: #fff;
@@ -146,7 +149,7 @@ nav ul li a:hover {
     grid-template-columns: 2fr 1fr 1fr;
     gap: 20px;
     margin-top: 20px;
-    
+
 }
 
 
@@ -156,10 +159,10 @@ nav ul li a:hover {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin: 1rem 0;  
+    margin: 1rem 0;
 }
-  
-  .view-btn {
+
+.view-btn {
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
@@ -172,6 +175,7 @@ nav ul li a:hover {
     width: 100%;
     box-sizing: border-box;
 }
+
 /* Default Grid View Styles */
 .business-cards.grid-view {
     display: grid;
@@ -199,8 +203,9 @@ nav ul li a:hover {
 .business-cards.list-view .contact-info {
     text-align: left;
 }
+
 .card {
-    background-color: var(--card-background);    
+    background-color: var(--card-background);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px black;
@@ -211,7 +216,7 @@ nav ul li a:hover {
 
 .card h4 {
     font-size: 1.2rem;
-    color: var(--text-color);    
+    color: var(--text-color);
     margin-bottom: 5px;
 }
 
@@ -254,7 +259,7 @@ nav ul li a:hover {
 .events h3,
 .current-weather h3,
 .weather-forecast h3 {
-    background-color: var(--text-color);    
+    background-color: var(--text-color);
     color: #fff;
     padding: 10px;
     margin-bottom: 10px;
@@ -266,7 +271,7 @@ nav ul li a:hover {
 .events,
 .current-weather,
 .weather-forecast {
-    background-color: var(--card-background);    
+    background-color: var(--card-background);
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px black;
@@ -285,13 +290,14 @@ nav ul li a:hover {
     color: white;
     overflow: hidden;
 }
+
 .hero-content {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    margin: 20px; 
-    text-align: left; 
-    color: white; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    text-align: left;
+    color: white;
 }
 
 .hero h3 {
@@ -313,7 +319,7 @@ nav ul li a:hover {
     bottom: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: var(--primary-color);    
+    background-color: var(--primary-color);
     color: var(--background-color);
     border: none;
     border-radius: 4px;
@@ -342,7 +348,7 @@ nav ul li a:hover {
 .current-weather,
 .weather-forecast,
 .join-chamber {
-    background-color: var(--card-background);    
+    background-color: var(--card-background);
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px black;
@@ -479,16 +485,124 @@ footer {
     color: #555;
 }
 
+.membership-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.membership-card a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-backdrop.active {
+    display: block;
+}
+
+.modal-close {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+}
+
+.thank-you-container {
+    text-align: center;
+}
+
+.form-data {
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.form-data h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form-data p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    .form-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .membership-cards {
+        margin-left: 2rem;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
         gap: 10px;
     }
+
     .nav-menu {
-        display:none;
+        display: none;
         position: absolute;
         top: 60px;
-        left:0;
+        left: 0;
         right: 0;
         width: 100%;
         background: var(--header-background);
@@ -518,9 +632,10 @@ footer {
     }
 
     .menu-toggle {
-        display: block; 
+        display: block;
         margin-left: auto;
     }
+
     .dark-mode-toggle {
         margin-left: 1rem;
     }
@@ -556,26 +671,30 @@ footer {
     .current-weather {
         grid-column: auto;
     }
+
     .events,
     .current-weather,
     .weather-forecast {
-        background-color: var(--card-background);    
+        background-color: var(--card-background);
         padding: 15px;
         border-radius: 5px;
         box-shadow: 0 2px 4px black;
 
     }
+
     .events h3,
     .current-weather h3,
     .weather-forecast h3 {
         font-size: 1rem;
     }
+
     .card h4,
     .card .subtitle,
     .contact-info p,
     .weather-data p {
         font-size: 0.9rem;
     }
+
     .weather-content {
         flex-direction: column;
         align-items: center;
@@ -583,15 +702,17 @@ footer {
     }
 
     .weather-icon img {
-        width: 50px; 
+        width: 50px;
         height: auto;
         margin: 0;
     }
+
+
 }
 
 @media (max-width: 480px) {
     .main-content {
-        gap: 10px; 
+        gap: 10px;
     }
 
     body {
@@ -604,20 +725,23 @@ footer {
     }
 
     .business-cards {
-        gap: 10px; 
+        gap: 10px;
     }
 
-    h1, h2, h3, p {
+    h1,
+    h2,
+    h3,
+    p {
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
 
     nav ul {
         display: flex;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         gap: 10px;
     }
-    
+
     button {
         max-width: 100%;
         padding: 10px;
@@ -637,5 +761,14 @@ footer {
     footer p {
         font-size: 0.8rem;
     }
-    
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+
+
 }

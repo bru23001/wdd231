@@ -1,54 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join | Seville Chamber of Commerce</title>
+    <meta name="description"
+        content="Explore Seville's business community through our comprehensive directory of Chamber of Commerce members. Find local businesses, services, and networking opportunities.">
+    <meta name="author" content="Victor J. Brun">
+    <title>Join Us | Seville Chamber of Commerce</title>
+    <link rel="icon" href="favicon.ico" type="image/favicon.ico">
     <link rel="stylesheet" href="styles/chamber.css">
     <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+
+    <meta property="og:title"
+        content="Seville Chamber of Commerce Business Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://bru23001.github.io/wdd231/chamber/images/camara-comercio-sevilla.png">
+    <meta property="og:url"
+        content="https://bru23001.github.io/wdd231/chamber/directory.html">
 </head>
+
+
 <body>
     <header>
-        <h1>Join the Chamber</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="discover.html">Discover</a>
-            <a href="directory.html">Directory</a>
-            <a href="join.html">Join</a>
-        </nav>
+        <div class="header-container">
+            <img src="images/camara-comercio-sevilla.png"
+                alt="Seville Chamber of Commerce logo" class="logo">
+            <h1>Seville Chamber of Commerce</h1>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+            <button class="dark-mode-toggle">🌗
+            </button>
+        </div>
     </header>
-    
+
     <main>
+        <section class="hero">
+            <h3>Welcome to the City of Seville</h3>
+            <h2>Connecting businesses for a thriving community.</h2>
+
+            <div class="hero-content">
+
+            </div>
+        </section>
         <section class="membership-info">
             <h2>Membership Benefits</h2>
-            <p>Information on different membership levels: non-profit, silver, gold.</p>
+            <p>Information on different membership levels: non-profit,
+                silver, gold.</p>
         </section>
-        
-        <section class="join-form">
-            <h2>Apply Now</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="membership">Membership Level:</label>
-                <select id="membership" name="membership">
-                    <option value="non-profit">Non-Profit</option>
-                    <option value="silver">Silver</option>
-                    <option value="gold">Gold</option>
-                </select>
-                
-                <button type="submit">Submit</button>
+
+        <div class="form-container">
+            <!-- Form -->
+            <form method="get" action="thankyou.html">
+                <label title="Enter your first name">First Name:
+                    <input type="text" id="first-name" name="firstName" required
+                        title="Enter your first name" autocomplete="given-name">
+                </label><br><br>
+
+                <label title="Enter your last name">Last Name:
+                    <input type="text" id="last-name" name="lastName" required
+                        title="Enter your last name" autocomplete="family-name">
+                </label><br><br>
+
+                <label title="Enter your organizational title">Organizational
+                    Title:
+                    <input type="text" id="org-title" name="orgTitle"
+                        title="Enter your organizational title"
+                        autocomplete="organization-title"
+                        pattern="^[a-zA-Z\s\-]{7,}$"
+                        placeholder="e.g., Manager">
+                </label><br><br>
+
+                <label title="Enter your email address">Email Address:
+                    <input type="email" id="email" name="email" required
+                        title="Enter your email address" autocomplete="email"
+                        placeholder="example@domain.com">
+                </label><br><br>
+
+                <label title="Enter your mobile phone number">Mobile Phone:
+                    <input type="tel" id="phone" name="mobilePhone" required
+                        title="Enter your mobile phone number"
+                        autocomplete="tel">
+                </label><br><br>
+
+                <label
+                    title="Enter your business or organization's name">Organization
+                    Name:
+                    <input type="text" id="org-name" name="organization"
+                        required
+                        title="Enter your business or organization's name"
+                        autocomplete="organization">
+                </label><br><br>
+
+                <label title="Select your membership level">Membership
+                    Level:
+                    <select id="membership" name="membership"
+                        title="Select your membership level">
+                        <option value="np">NP Membership (Non-Profit, No
+                            Fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label><br><br>
+
+                <label
+                    title="Provide a description of your organization">Organization
+                    Description:
+                    <textarea id="description" name="description"
+                        title="Provide a description of your organization"
+                        rows="4" cols="50"></textarea>
+                </label><br><br>
+
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                <input type="submit" value="Submit Application">
             </form>
-        </section>
+            <div class="membership-cards">
+                <div class="membership-card">
+                    <h2>NP Membership</h2>
+                    <a href="#" data-modal="np-modal">View Benefits</a>
+                </div>
+                <div class="membership-card">
+                    <h2>Bronze Membership</h2>
+                    <a href="#" data-modal="bronze-modal">View Benefits</a>
+                </div>
+                <div class="membership-card">
+                    <h2>Silver Membership</h2>
+                    <a href="#" data-modal="silver-modal">View Benefits</a>
+                </div>
+                <div class="membership-card">
+                    <h2>Gold Membership</h2>
+                    <a href="#" data-modal="gold-modal">View Benefits</a>
+                </div>
+            </div>
+        </div>
+        <div id="np-modal" class="modal">
+            <h2>NP Membership Benefits</h2>
+            <p>No fees, access to networking opportunities, and event
+                participation.</p>
+            <span class="modal-close">Close</span>
+        </div>
+        <div id="bronze-modal" class="modal">
+            <h2>Bronze Membership Benefits</h2>
+            <p>Includes all NP benefits plus discounted event participation
+                and training.</p>
+            <span class="modal-close">Close</span>
+        </div>
+        <div id="silver-modal" class="modal">
+            <h2>Silver Membership Benefits</h2>
+            <p>Includes all Bronze benefits plus advertising and spotlight
+                positions.</p>
+            <span class="modal-close">Close</span>
+        </div>
+        <div id="gold-modal" class="modal">
+            <h2>Gold Membership Benefits</h2>
+            <p>Includes all Silver benefits plus exclusive event invitations
+                and premium features.</p>
+            <span class="modal-close">Close</span>
+        </div>
+        <div class="modal-backdrop"></div>
     </main>
 
     <footer>
-        <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸</p>
+        <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸
+        </p>
         <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
 
 </body>
+
 </html>

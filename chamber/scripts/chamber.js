@@ -111,3 +111,35 @@ darkModeToggle.addEventListener('click', () => {
 document.getElementById('current-year').textContent = new Date().getFullYear();
 document.getElementById('last-modified').textContent = document.lastModified;
 
+const modalLinks = document.querySelectorAll('[data-modal]');
+const modals = document.querySelectorAll('.modal');
+const backdrop = document.querySelector('.modal-backdrop');
+const closeButtons = document.querySelectorAll('.modal-close');
+modalLinks.forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        const modalId = link.getAttribute('data-modal');
+        document.getElementById(modalId).classList.add('active');
+        backdrop.classList.add('active');
+    });
+});
+
+closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        modals.forEach(modal => modal.classList.remove('active'));
+        backdrop.classList.remove('active');
+    });
+});
+
+backdrop.addEventListener('click', () => {
+    modals.forEach(modal => modal.classList.remove('active'));
+    backdrop.classList.remove('active');
+});
+
+const urlParams = new URLSearchParams(window.location.search);
+document.getElementById('firstName').textContent = urlParams.get('firstName');
+document.getElementById('lastName').textContent = urlParams.get('lastName');
+document.getElementById('email').textContent = urlParams.get('email');
+document.getElementById('mobilePhone').textContent = urlParams.get('mobilePhone');
+document.getElementById('organization').textContent = urlParams.get('organization');
+document.getElementById('timestamp').textContent = urlParams.get('timestamp');
