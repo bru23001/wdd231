@@ -141,7 +141,7 @@ This file contains media queries for responsive styling of the Chamber website.
         transform: translateY(0);
     }
 
-};
+}
 
 
 @media (max-width: 480px) {
@@ -219,43 +219,7 @@ This file contains media queries for responsive styling of the Chamber website.
     .membership-card {
         flex: 1 1 100%;
     }
-}
 
-/* Membership Cards Animation */
-.membership-card {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.membership-cards.loaded .membership-card {
-    opacity: 1;
-    transform: translateY(0);
-};
-
-@media (min-width: 768px) {
-    .form-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .membership-cards {
-        margin-left: 2rem;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .membership-card {
-        flex: 1 1 100%;
-        padding: 1rem;
-        border: 1px solid #ddd;
-        background-color: #f9f9f9;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        border-radius: 8px;
-    }
 
     /* Membership Cards Animation */
     .membership-card {
@@ -269,5 +233,42 @@ This file contains media queries for responsive styling of the Chamber website.
         transform: translateY(0);
     }
 
+    @media (min-width: 768px) {
+        .form-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
+        .membership-cards {
+            margin-left: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .membership-card {
+            flex: 1 1 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* Membership Cards Animation */
+        .membership-card {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .membership-cards.loaded .membership-card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+    }
 }
