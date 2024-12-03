@@ -141,9 +141,7 @@ This file contains media queries for responsive styling of the Chamber website.
         transform: translateY(0);
     }
 
-}
-
-;
+};
 
 
 @media (max-width: 480px) {
@@ -233,9 +231,7 @@ This file contains media queries for responsive styling of the Chamber website.
 .membership-cards.loaded .membership-card {
     opacity: 1;
     transform: translateY(0);
-}
-
-;
+};
 
 @media (min-width: 768px) {
     .form-container {
