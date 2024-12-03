@@ -80,45 +80,40 @@
             <div class="form-card">
                 <form method="get" action="thankyou.html">
                     <input type="hidden" id="timestamp" name="timestamp">
-
-                    <!-- First Name -->
-                    <label for="firstName">First Name:
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <label for="firstName">First Name</label>
                         <input type="text" id="firstName" name="firstName"
-                            required autocomplete="given-name">
-                    </label>
+                            required tabindex="1" autofocus>
 
-                    <!-- Last Name -->
-                    <label for="lastName">Last Name:
+                        <label for="lastName">Last Name</label>
                         <input type="text" id="lastName" name="lastName"
-                            required autocomplete="family-name">
-                    </label>
+                            required tabindex="2">
 
-                    <!-- Email -->
-                    <label for="email">Email Address:
+                        <label for="orgTitle">Organizational Title:
+                            <input type="text" id="orgTitle" name="orgTitle"
+                                required autocomplete="organization-title"
+                                pattern="^[a-zA-Z\s\-]{7,}$"
+                                placeholder="e.g., Project Manager">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <label for="email">Email</label>
                         <input type="email" id="email" name="email" required
-                            autocomplete="email"
-                            placeholder="example@domain.com">
-                    </label>
+                            tabindex="4" aria-describedby="email-desc">
+                        <span id="email-desc" class="visually-hidden">Enter your
+                            email in the format: user@example.com</span>
 
-                    <!-- Mobile Phone -->
-                    <label for="mobilePhone">Mobile Phone:
-                        <input type="tel" id="mobilePhone" name="mobilePhone"
-                            required autocomplete="tel">
-                    </label>
+                        <label for="phone">Mobile Phone</label>
+                        <input type="tel" id="phone" name="phone" required
+                            tabindex="5">
 
-                    <!-- Organization Name -->
-                    <label for="organization">Organization Name:
+                        <label for="organization">Organization</label>
                         <input type="text" id="organization" name="organization"
-                            required autocomplete="organization">
-                    </label>
-
-                    <!-- Organizational Title -->
-                    <label for="orgTitle">Organizational Title:
-                        <input type="text" id="orgTitle" name="orgTitle"
-                            required autocomplete="organization-title"
-                            pattern="^[a-zA-Z\s\-]{7,}$"
-                            placeholder="e.g., Project Manager">
-                    </label>
+                            required tabindex="6">
+                    </fieldset>
 
                     <!-- Organization Description -->
                     <label for="description">Organization Description:
@@ -127,32 +122,27 @@
                             rows="4" cols="50"></textarea>
                     </label>
 
-                    <!-- Submit Button -->
-                    <input type="submit" value="Submit Application">
+                    <input type="submit" value="Submit Application" tabindex="7" aria-label="Submit application form">
                 </form>
             </div>
 
             <!-- Membership Cards -->
             <div class="membership-cards">
-                <div class="membership-card">
+                <div class="membership-card" tabindex="8" role="group" aria-label="Non-Profit Membership">
                     <h2>Non-Profit Membership Level</h2>
-                    <button class="learn-more-btn" data-modal="np-modal">Learn
-                        More</button>
+                    <button class="learn-more-btn" data-modal="np-modal" tabindex="9">Learn More</button>
                 </div>
-                <div class="membership-card">
+                <div class="membership-card" tabindex="10" role="group" aria-label="Bronze Membership">
                     <h2>Bronze Membership Level</h2>
-                    <button class="learn-more-btn"
-                        data-modal="bronze-modal">Learn More</button>
+                    <button class="learn-more-btn" data-modal="bronze-modal" tabindex="11">Learn More</button>
                 </div>
-                <div class="membership-card">
+                <div class="membership-card" tabindex="12" role="group" aria-label="Silver Membership">
                     <h2>Silver Membership Level</h2>
-                    <button class="learn-more-btn"
-                        data-modal="silver-modal">Learn More</button>
+                    <button class="learn-more-btn" data-modal="silver-modal" tabindex="13">Learn More</button>
                 </div>
-                <div class="membership-card">
+                <div class="membership-card" tabindex="14" role="group" aria-label="Gold Membership">
                     <h2>Gold Membership Level</h2>
-                    <button class="learn-more-btn" data-modal="gold-modal">Learn
-                        More</button>
+                    <button class="learn-more-btn" data-modal="gold-modal" tabindex="15">Learn More</button>
                 </div>
             </div>
         </div>

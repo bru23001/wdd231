@@ -129,8 +129,21 @@ This file contains media queries for responsive styling of the Chamber website.
         flex: 1 1 100%;
     }
 
+    /* Membership Cards Animation */
+    .membership-card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
 
-};
+    .membership-cards.loaded .membership-card {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+;
 
 
 @media (max-width: 480px) {
@@ -183,11 +196,11 @@ This file contains media queries for responsive styling of the Chamber website.
     }
 
     .current-weather {
-        grid-column: auto; 
+        grid-column: auto;
     }
 
     .weather-icon img {
-        width: 40px; 
+        width: 40px;
         height: auto;
         margin: 0;
     }
@@ -197,24 +210,32 @@ This file contains media queries for responsive styling of the Chamber website.
     }
 
     .form-container {
-        display: flex;
         flex-direction: column;
     }
 
     .membership-cards {
-        flex-direction: column; 
-        gap: 15px; 
+        flex-direction: column;
+        gap: 10px;
     }
 
     .membership-card {
         flex: 1 1 100%;
-        padding: 1rem;
-        background-color: #f5f5f5; 
-        border: 1px solid #ddd; 
-        border-radius: 8px; 
-        text-align: center; 
     }
-};
+}
+
+/* Membership Cards Animation */
+.membership-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.membership-cards.loaded .membership-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+;
 
 @media (min-width: 768px) {
     .form-container {
@@ -229,15 +250,28 @@ This file contains media queries for responsive styling of the Chamber website.
         display: flex;
         flex-direction: column;
     }
+
     .membership-card {
-        flex: 1 1 100%; 
-        padding: 1rem; 
-        border: 1px solid #ddd; 
-        background-color: #f9f9f9; 
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-        text-align: center; 
-        border-radius: 8px; 
+        flex: 1 1 100%;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        border-radius: 8px;
     }
-    
-    
+
+    /* Membership Cards Animation */
+    .membership-card {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .membership-cards.loaded .membership-card {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
 }

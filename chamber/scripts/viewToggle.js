@@ -112,4 +112,11 @@ async function toggleView() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const membershipCards = document.querySelector(".membership-cards");
+    if (membershipCards) {
+        // Add the "loaded" class to trigger the CSS animation
+        membershipCards.classList.add("loaded");
+    }
+});
 
