@@ -1,0 +1,41 @@
+/* =================================================================================== */
+/* ============================== HERO SECTION ====================================== */
+/* =================================================================================== */
+/* 
+This file contains styles for the hero section of the website.
+*/
+
+.hero {
+    position: relative;
+    background-image: url('../images/seville.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    text-align: left;
+    color: white;
+}
+
+.hero h3 {
+    color: var(--background-color);
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.hero h2 {
+    color: var(--background-color);
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 20px;
+
+}

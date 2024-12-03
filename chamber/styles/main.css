@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual section styling */
+.events,
+.current-weather,
+.weather-forecast {
+    background-color: var(--card-background);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px black;
+}
+
+/* Section header styling */
+.events h3,
+.current-weather h3,
+.weather-forecast h3 {
+    background-color: var(--text-color);
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    background-image: url('../images/seville.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    text-align: left;
+    color: white;
+}
+
+.hero h3 {
+    color: var(--background-color);
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.hero h2 {
+    color: var(--background-color);
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 20px;
+
+}
+
+.keynote-button,
+.button {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 2;
+}
+
+.keynote-button:hover {
+    background-color: var(--accent-color);
+}
+
+.view-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.join-button:hover {
+    background-color: var(--accent-color);
+}
+

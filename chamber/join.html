@@ -8,10 +8,28 @@
         content="Explore Seville's business community through our comprehensive directory of Chamber of Commerce members. Find local businesses, services, and networking opportunities.">
     <meta name="author" content="Victor J. Brun">
     <title>Join Us | Seville Chamber of Commerce</title>
+
     <link rel="icon" href="favicon.ico" type="image/favicon.ico">
-    <link rel="stylesheet" href="styles/chamber.css">
-    <script src="scripts/chamber.js" defer></script>
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/cards.css">
+    <link rel="stylesheet" href="styles/weather.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/modals.css">
+
     <script src="scripts/weather.js" defer></script>
+    <script src="scripts/modalManager.js" defer></script>
+    <script src="scripts/darkModeToggle.js" defer></script>
+    <script src="scripts/formHandler.js" defer></script>
+    <script src="scripts/viewToggle.js" defer></script>
+    <script src="scripts/businesses.json" defer></script>
+
 
     <meta property="og:title"
         content="Seville Chamber of Commerce Business Directory">
@@ -59,115 +77,120 @@
         </section>
 
         <div class="form-container">
-            <!-- Form -->
-            <form method="get" action="thankyou.html">
-                <label title="Enter your first name">First Name:
-                    <input type="text" id="first-name" name="firstName" required
-                        title="Enter your first name" autocomplete="given-name">
-                </label><br><br>
+            <div class="form-card">
+                <form method="get" action="thankyou.html">
+                    <input type="hidden" id="timestamp" name="timestamp">
 
-                <label title="Enter your last name">Last Name:
-                    <input type="text" id="last-name" name="lastName" required
-                        title="Enter your last name" autocomplete="family-name">
-                </label><br><br>
+                    <!-- First Name -->
+                    <label for="firstName">First Name:
+                        <input type="text" id="firstName" name="firstName"
+                            required autocomplete="given-name">
+                    </label>
 
-                <label title="Enter your organizational title">Organizational
-                    Title:
-                    <input type="text" id="org-title" name="orgTitle"
-                        title="Enter your organizational title"
-                        autocomplete="organization-title"
-                        pattern="^[a-zA-Z\s\-]{7,}$"
-                        placeholder="e.g., Manager">
-                </label><br><br>
+                    <!-- Last Name -->
+                    <label for="lastName">Last Name:
+                        <input type="text" id="lastName" name="lastName"
+                            required autocomplete="family-name">
+                    </label>
 
-                <label title="Enter your email address">Email Address:
-                    <input type="email" id="email" name="email" required
-                        title="Enter your email address" autocomplete="email"
-                        placeholder="example@domain.com">
-                </label><br><br>
+                    <!-- Email -->
+                    <label for="email">Email Address:
+                        <input type="email" id="email" name="email" required
+                            autocomplete="email"
+                            placeholder="example@domain.com">
+                    </label>
 
-                <label title="Enter your mobile phone number">Mobile Phone:
-                    <input type="tel" id="phone" name="mobilePhone" required
-                        title="Enter your mobile phone number"
-                        autocomplete="tel">
-                </label><br><br>
+                    <!-- Mobile Phone -->
+                    <label for="mobilePhone">Mobile Phone:
+                        <input type="tel" id="mobilePhone" name="mobilePhone"
+                            required autocomplete="tel">
+                    </label>
 
-                <label
-                    title="Enter your business or organization's name">Organization
-                    Name:
-                    <input type="text" id="org-name" name="organization"
-                        required
-                        title="Enter your business or organization's name"
-                        autocomplete="organization">
-                </label><br><br>
+                    <!-- Organization Name -->
+                    <label for="organization">Organization Name:
+                        <input type="text" id="organization" name="organization"
+                            required autocomplete="organization">
+                    </label>
 
-                <label title="Select your membership level">Membership
-                    Level:
-                    <select id="membership" name="membership"
-                        title="Select your membership level">
-                        <option value="np">NP Membership (Non-Profit, No
-                            Fee)</option>
-                        <option value="bronze">Bronze Membership</option>
-                        <option value="silver">Silver Membership</option>
-                        <option value="gold">Gold Membership</option>
-                    </select>
-                </label><br><br>
+                    <!-- Organizational Title -->
+                    <label for="orgTitle">Organizational Title:
+                        <input type="text" id="orgTitle" name="orgTitle"
+                            required autocomplete="organization-title"
+                            pattern="^[a-zA-Z\s\-]{7,}$"
+                            placeholder="e.g., Project Manager">
+                    </label>
 
-                <label
-                    title="Provide a description of your organization">Organization
-                    Description:
-                    <textarea id="description" name="description"
-                        title="Provide a description of your organization"
-                        rows="4" cols="50"></textarea>
-                </label><br><br>
+                    <!-- Organization Description -->
+                    <label for="description">Organization Description:
+                        <textarea id="description" name="description"
+                            title="Provide a description of your organization"
+                            rows="4" cols="50"></textarea>
+                    </label>
 
-                <input type="hidden" id="timestamp" name="timestamp" value="">
+                    <!-- Submit Button -->
+                    <input type="submit" value="Submit Application">
+                </form>
+            </div>
 
-                <input type="submit" value="Submit Application">
-            </form>
+            <!-- Membership Cards -->
             <div class="membership-cards">
                 <div class="membership-card">
-                    <h2>NP Membership</h2>
-                    <a href="#" data-modal="np-modal">View Benefits</a>
+                    <h2>Non-Profit Membership Level</h2>
+                    <button class="learn-more-btn" data-modal="np-modal">Learn
+                        More</button>
                 </div>
                 <div class="membership-card">
-                    <h2>Bronze Membership</h2>
-                    <a href="#" data-modal="bronze-modal">View Benefits</a>
+                    <h2>Bronze Membership Level</h2>
+                    <button class="learn-more-btn"
+                        data-modal="bronze-modal">Learn More</button>
                 </div>
                 <div class="membership-card">
-                    <h2>Silver Membership</h2>
-                    <a href="#" data-modal="silver-modal">View Benefits</a>
+                    <h2>Silver Membership Level</h2>
+                    <button class="learn-more-btn"
+                        data-modal="silver-modal">Learn More</button>
                 </div>
                 <div class="membership-card">
-                    <h2>Gold Membership</h2>
-                    <a href="#" data-modal="gold-modal">View Benefits</a>
+                    <h2>Gold Membership Level</h2>
+                    <button class="learn-more-btn" data-modal="gold-modal">Learn
+                        More</button>
                 </div>
             </div>
         </div>
+
+        <!-- Modals -->
         <div id="np-modal" class="modal">
-            <h2>NP Membership Benefits</h2>
-            <p>No fees, access to networking opportunities, and event
-                participation.</p>
-            <span class="modal-close">Close</span>
+            <div class="modal-content">
+                <h2>Non-Profit Membership Benefits</h2>
+                <p>No fees, access to networking opportunities, and event
+                    participation.</p>
+                <button class="close-modal">Close</button>
+            </div>
         </div>
         <div id="bronze-modal" class="modal">
-            <h2>Bronze Membership Benefits</h2>
-            <p>Includes all NP benefits plus discounted event participation
-                and training.</p>
-            <span class="modal-close">Close</span>
+            <div class="modal-content">
+                <h2>Bronze Membership Benefits</h2>
+                <p>Includes all Non-Profit benefits plus discounted event
+                    participation and training.</p>
+                <button class="close-modal">Close</button>
+            </div>
         </div>
         <div id="silver-modal" class="modal">
-            <h2>Silver Membership Benefits</h2>
-            <p>Includes all Bronze benefits plus advertising and spotlight
-                positions.</p>
-            <span class="modal-close">Close</span>
+            <div class="modal-content">
+                <h2>Silver Membership Benefits</h2>
+                <p>Includes all Bronze benefits plus advertising and spotlight
+                    positions.</p>
+                <button class="close-modal">Close</button>
+            </div>
         </div>
         <div id="gold-modal" class="modal">
-            <h2>Gold Membership Benefits</h2>
-            <p>Includes all Silver benefits plus exclusive event invitations
-                and premium features.</p>
-            <span class="modal-close">Close</span>
+            <div class="modal-content">
+                <h2>Gold Membership Benefits</h2>
+                <p>Includes all Silver benefits plus exclusive event invitations
+                    and premium features.</p>
+                <button class="close-modal">Close</button>
+            </div>
         </div>
+
         <div class="modal-backdrop"></div>
     </main>
 

@@ -1,0 +1,16 @@
+/* =================================================================================== */
+/* ============================ CSS VARIABLES ======================================== */
+/* =================================================================================== */
+/* 
+This file contains CSS variables for the Chamber website. 
+It defines reusable custom properties for colors, fonts, and other stylistic elements.
+*/
+
+:root {
+    --background-color: #fffcff;
+    --primary-color: #247ba0;
+    --accent-color: #c3b299;
+    --text-color: #50514F;
+    --border-color: #aaa;
+    --card-background: #cbd4c2;
+}

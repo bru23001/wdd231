@@ -1,5 +1,13 @@
+// ===================================================================================
+// ========================= DIRECTORY VIEW TOGGLE ==================================
+// ===================================================================================
+/**
+ * This module manages the toggle between grid and list views for the business 
+ * directory on the Chamber website.
+ */
+
 // Function to fetch and display companies from a JSON file
-/* async function displayCompanies() {
+async function displayCompanies() {
     const businessList = document.querySelector('.business-cards');
     businessList.innerHTML = '';
 
@@ -36,23 +44,9 @@
         businessList.innerHTML = '<p>Error loading business data. Please try again later.</p>';
     }
 }
- */
-// Helper function for membership level
-/* function getMembershipLevel(level) {
-    switch (level) {
-        case 1:
-            return 'Silver';
-        case 2:
-            return 'Gold';
-        case 3:
-            return 'Platinum';
-        default:
-            return 'Unknown';
-    }
-}*/
 
 /// Call displayCompanies when the page loads
-/* document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     displayCompanies();
 
     const gridBtn = document.getElementById('grid');
@@ -68,8 +62,24 @@
         businessCards.classList.remove('grid-view');
         businessCards.classList.add('list-view');
     });
-}); */
-/* document.addEventListener('DOMContentLoaded', () => {
+});
+
+
+
+function getMembershipLevel(level) {
+    switch (level) {
+        case 1:
+            return 'Silver';
+        case 2:
+            return 'Gold';
+        case 3:
+            return 'Platinum';
+        default:
+            return 'Unknown';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const header = document.querySelector('header');
@@ -81,7 +91,6 @@
             menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
         );
     });
-
     document.addEventListener('click', (e) => {
         if (!header.contains(e.target) && navMenu.classList.contains('show')) {
             navMenu.classList.remove('show');
@@ -89,11 +98,11 @@
             menuToggle.setAttribute('aria-expanded', 'false');
         }
     });
-}); */
+});
 
 
 // Toggle between grid and list view
-/* async function toggleView() {
+async function toggleView() {
     try {
         const businessList = document.getElementById('business-list');
         businessList.classList.toggle('grid-view');
@@ -101,58 +110,6 @@
     } catch (error) {
         console.error('Error toggling view:', error);
     }
-} */
+}
 
-/* const darkModeToggle = document.querySelector('.dark-mode-toggle');
-darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-}); */
 
-// Set current year and last modified date in footer
-/* document.getElementById('current-year').textContent = new Date().getFullYear();
-document.getElementById('last-modified').textContent = document.lastModified;
- */
-/* document.addEventListener('DOMContentLoaded', () => {
-    const modalButtons = document.querySelectorAll('.learn-more-btn');
-    const modals = document.querySelectorAll('.modal');
-    const closeButtons = document.querySelectorAll('.close-modal');
-
-    // Open modal
-    modalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modalId = button.getAttribute('data-modal');
-            document.getElementById(modalId).style.display = 'flex';
-        });
-    });
-
-    // Close modal
-    closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            button.closest('.modal').style.display = 'none';
-        });
-    });
-
-    // Close modal when clicking outside content
-    modals.forEach(modal => {
-        modal.addEventListener('click', event => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    });
-
-    const urlParams = new URLSearchParams(window.location.search);
-    document.getElementById('firstName').textContent = urlParams.get('firstName');
-    document.getElementById('lastName').textContent = urlParams.get('lastName');
-    document.getElementById('email').textContent = urlParams.get('email');
-    document.getElementById('mobilePhone').textContent = urlParams.get('mobilePhone');
-    document.getElementById('organization').textContent = urlParams.get('organization');
-    document.getElementById('timestamp').textContent = urlParams.get('timestamp');
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const timestampInput = document.getElementById('timestamp');
-        if (timestampInput) {
-            timestampInput.value = new Date().toISOString();
-        }
-    });
-}) */

@@ -1,0 +1,65 @@
+/* =================================================================================== */
+/* ====================== CURRENT WEATHER AND FORECAST ============================== */
+/* =================================================================================== */
+/* 
+This file contains styles for the current weather and weather forecast sections.
+*/
+
+.current-weather {
+    grid-column: 2;
+}
+
+/*Current Weather and Forecast Styling */
+.current-weather,
+.weather-forecast,
+.join-chamber {
+    background-color: var(--card-background);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px black;
+    font-size: 0.9rem;
+}
+
+.events h3,
+.current-weather h3,
+.weather-forecast h3,
+.join-chamber h3 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.weather-data {
+    font-size: 0.9rem;
+}
+
+.weather-data p {
+    margin: 4px 0;
+}
+
+.weather-content {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.weather-icon img {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto 10px;
+}
+
+.forecast-item {
+    margin-bottom: 10px;
+}
+
+.forecast-item p {
+    margin: 0;
+}
