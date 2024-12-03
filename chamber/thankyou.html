@@ -36,22 +36,32 @@
 
 <body>
     <header>
-        <h1>Thank You!</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="discover.html">Discover</a>
-            <a href="directory.html">Directory</a>
-            <a href="join.html">Join</a>
-        </nav>
+        <div class="header-container">
+            <img src="images/camara-comercio-sevilla.png"
+                alt="Seville Chamber of Commerce logo" class="logo">
+            <h1>Seville Chamber of Commerce</h1>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+            <button class="dark-mode-toggle">🌗
+            </button>
+        </div>
     </header>
 
     <main>
+        <h2>Thank You!</h2>
         <div class="thank-you-container">
-            <h2>We appreciate your application!</h2>
+            <h3>We appreciate your application!</h3>
             <p>Below are the details you provided:</p>
 
             <div class="form-data">
-                <h3>Your Submitted Information</h3>
+                <h4>Your Submitted Information</h4>
                 <p><strong>First Name:</strong> <span id="firstName"></span></p>
                 <p><strong>Last Name:</strong> <span id="lastName"></span></p>
                 <p><strong>Email Address:</strong> <span id="email"></span></p>
@@ -63,6 +73,7 @@
     </main>
 
     <footer>
+        <h2 class="visually-hidden">Footer Information</h2> 
         <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸</p>
         <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
