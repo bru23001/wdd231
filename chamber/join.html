@@ -10,7 +10,7 @@
     <title>Join Us | Seville Chamber of Commerce</title>
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
+
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/layout.css">
@@ -71,7 +71,7 @@
             </div>
         </section>
         <section class="membership-info">
-            <h2>Membership Benefits</h2>
+            <h2>Join Us</h2>
             <p>Information on different membership levels: non-profit,
                 silver, gold.</p>
         </section>
@@ -115,6 +115,25 @@
                             required tabindex="6">
                     </fieldset>
 
+                    <fieldset>
+                        <legend>Membership Level</legend>
+                        <label for="membershipLevel">Select your membership
+                            level:</label>
+                        <select id="membershipLevel" name="membershipLevel"
+                            required>
+                            <option value="" disabled selected>Select a
+                                membership level</option>
+                            <option value="NP Membership">NP Membership
+                                (Non-profit organizations, no fee)</option>
+                            <option value="Bronze Membership">Bronze Membership
+                            </option>
+                            <option value="Silver Membership">Silver Membership
+                            </option>
+                            <option value="Gold Membership">Gold Membership
+                            </option>
+                        </select>
+                    </fieldset>
+
                     <!-- Organization Description -->
                     <label for="description">Organization Description:
                         <textarea id="description" name="description"
@@ -122,27 +141,36 @@
                             rows="4" cols="50"></textarea>
                     </label>
 
-                    <input type="submit" value="Submit Application" tabindex="7" aria-label="Submit application form">
+                    <input type="submit" value="Submit Application" tabindex="7"
+                        aria-label="Submit application form">
                 </form>
             </div>
 
             <!-- Membership Cards -->
             <div class="membership-cards">
-                <div class="membership-card" tabindex="8" role="group" aria-label="Non-Profit Membership">
+                <div class="membership-card" tabindex="8" role="group"
+                    aria-label="Non-Profit Membership">
                     <h2>Non-Profit Membership Level</h2>
-                    <button class="learn-more-btn" data-modal="np-modal" tabindex="9">Learn More</button>
+                    <button class="learn-more-btn" data-modal="np-modal"
+                        tabindex="9">Learn More</button>
                 </div>
-                <div class="membership-card" tabindex="10" role="group" aria-label="Bronze Membership">
+                <div class="membership-card" tabindex="10" role="group"
+                    aria-label="Bronze Membership">
                     <h2>Bronze Membership Level</h2>
-                    <button class="learn-more-btn" data-modal="bronze-modal" tabindex="11">Learn More</button>
+                    <button class="learn-more-btn" data-modal="bronze-modal"
+                        tabindex="11">Learn More</button>
                 </div>
-                <div class="membership-card" tabindex="12" role="group" aria-label="Silver Membership">
+                <div class="membership-card" tabindex="12" role="group"
+                    aria-label="Silver Membership">
                     <h2>Silver Membership Level</h2>
-                    <button class="learn-more-btn" data-modal="silver-modal" tabindex="13">Learn More</button>
+                    <button class="learn-more-btn" data-modal="silver-modal"
+                        tabindex="13">Learn More</button>
                 </div>
-                <div class="membership-card" tabindex="14" role="group" aria-label="Gold Membership">
+                <div class="membership-card" tabindex="14" role="group"
+                    aria-label="Gold Membership">
                     <h2>Gold Membership Level</h2>
-                    <button class="learn-more-btn" data-modal="gold-modal" tabindex="15">Learn More</button>
+                    <button class="learn-more-btn" data-modal="gold-modal"
+                        tabindex="15">Learn More</button>
                 </div>
             </div>
         </div>
@@ -185,7 +213,7 @@
     </main>
 
     <footer>
-        <h2 class="visually-hidden">Footer Information</h2> 
+        <h2 class="visually-hidden">Footer Information</h2>
         <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸</p>
         <p>Last Modification: <span id="last-modified"></span></p>
     </footer>

@@ -6,7 +6,7 @@ This file contains styles specific to the website header and navigation.
 */
 
 header {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     padding: 10px 20px;
     display: flex;
     align-items: center;

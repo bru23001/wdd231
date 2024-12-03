@@ -10,7 +10,7 @@
     <title>Discover | Seville Chamber of Commerce</title>
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
+
 
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/variables.css">
@@ -35,16 +35,32 @@
 
 <body>
     <header>
-        <h1>Discover Seville</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="discover.html">Discover</a>
-            <a href="directory.html">Directory</a>
-            <a href="join.html">Join</a>
-        </nav>
+        <div class="header-container">
+            <img src="images/camara-comercio-sevilla.png"
+                alt="Seville Chamber of Commerce logo" class="logo">
+            <h1>Seville Chamber of Commerce</h1>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+            <button class="dark-mode-toggle">🌗
+            </button>
+        </div>
     </header>
 
     <main>
+        <section class="hero">
+            <h3>Welcome to the City of Seville</h3>
+            <h2>Connecting businesses for a thriving community.</h2>
+            <div class="hero-content">
+            </div>
+        </section>
+        <h2>Discover</h2>
         <section class="history">
             <h2>Our History</h2>
             <p>Information about Seville's history.</p>

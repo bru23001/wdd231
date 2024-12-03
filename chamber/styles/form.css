@@ -25,12 +25,7 @@
     flex: 1 1 100%;
 }
 
-label {
-    display: block;
-    font-size: 1rem;
-    color: var(--text-color);
-    margin-bottom: 10px;
-}
+
 
 .form-data {
     margin: 2rem auto;
@@ -51,16 +46,24 @@ label {
     margin: 0.5rem 0;
 }
 
+/* Base styling for input fields */
 input,
 select,
 textarea {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    box-sizing: border-box;
+    width: 100%; /* Full width for better responsiveness */
+    padding: 10px; /* Add padding for better usability */
+    margin-bottom: 15px; /* Add space between fields */
+    border: 1px solid #ddd; /* Light border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Standard font size */
+    box-sizing: border-box; /* Ensure padding does not affect size */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #0056b3; /* Accessible focus indicator */
+    background-color: #f9f9f9; /* Slightly different background on focus */
 }
 
 form input[type="submit"] {
@@ -81,7 +84,6 @@ form input[type="submit"]:hover {
 input:focus,
 button:focus,
 .membership-card:focus {
-    outline: 2px solid #0056b3;
     outline-offset: 4px;
 }
 
@@ -109,10 +111,12 @@ legend {
     margin-bottom: 10px;
 }
 
+/* Labels */
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    display: block; /* Ensure labels appear above inputs */
+    margin-bottom: 5px; /* Add space between label and field */
+    font-weight: bold; /* Make labels visually distinct */
+    font-size: 1rem; /* Standard font size for consistency */
 }
 
 input {
@@ -127,14 +131,52 @@ input:focus {
     border-color: #0056b3;
 }
 
-/* Submit Button */
-input[type="submit"] {
-    background-color: #247ba0;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+/* Submit and button styles */
+input[type="submit"],
+button {
+    background-color: #247ba0; /* Primary color */
+    color: white; /* Accessible contrast */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Button padding for usability */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for buttons */
     font-size: 1rem;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #005f73; /* Darker hover color */
+}
+/* Dropdown Menu Styling */
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
     cursor: pointer;
+    
+}
+
+select:focus {
+    outline: 2px solid #0056b3;
+    background-color: #ffffff;
+}
+
+/* Error styles for invalid fields */
+input:invalid,
+textarea:invalid,
+select:invalid {
+    border: 2px solid red; /* Highlight invalid inputs */
+}
+
+.error-message {
+    color: red; /* Error message color */
+    font-size: 0.9rem; /* Slightly smaller font for errors */
+    margin-top: -10px; /* Adjust spacing below the field */
+    margin-bottom: 10px;
+    display: block;
 }
 
