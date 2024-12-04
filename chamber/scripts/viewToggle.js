@@ -120,3 +120,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// Lazy loading images
+document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll(".lazy");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove("lazy");
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    lazyImages.forEach((img) => {
+        observer.observe(img);
+    });
+});
+
+// Visitor tracking
+const visitorMessage = document.getElementById("visitorMessage");
+
+function getDaysBetween(date1, date2) {
+    return Math.floor((date2 - date1) / (1000 * 60 * 60 * 24));
+}
+
+const lastVisit = localStorage.getItem("lastVisit");
+const currentDate = Date.now();
+
+if (!lastVisit) {
+    visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
+} else {
+    const days = getDaysBetween(Number(lastVisit), currentDate);
+    if (days < 1) {
+        visitorMessage.textContent = "Back so soon! Awesome!";
+    } else if (days === 1) {
+        visitorMessage.textContent = "You last visited 1 day ago.";
+    } else {
+        visitorMessage.textContent = `You last visited ${days} days ago.`;
+    }
+}
+
+localStorage.setItem("lastVisit", currentDate);
+

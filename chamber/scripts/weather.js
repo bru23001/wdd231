@@ -44,3 +44,38 @@ function displayWeather(data) {
 }
 // Call the API fetch function
 apiFetch();
+
+function renderCalendar() {
+    const date = new Date();
+    const month = date.getMonth();
+    const year = date.getFullYear();
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const today = date.getDate();
+    
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                   'July', 'August', 'September', 'October', 'November', 'December'];
+    const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    
+    // Set header
+    document.querySelector('.calendar-header').textContent = `${months[month]} ${year}`;
+    
+    // Set weekdays
+    const weekdaysHTML = weekdays.map(day => `<div>${day}</div>`).join('');
+    document.querySelector('.weekdays').innerHTML = weekdaysHTML;
+    
+    // Set days
+    let daysHTML = '';
+    for (let i = 0; i < firstDay; i++) {
+      daysHTML += '<div></div>';
+    }
+    
+    for (let day = 1; day <= daysInMonth; day++) {
+      const isToday = day === today ? 'today' : '';
+      daysHTML += `<div class="${isToday}">${day}</div>`;
+    }
+    
+    document.querySelector('.days').innerHTML = daysHTML;
+  }
+  
+  document.addEventListener('DOMContentLoaded', renderCalendar); 

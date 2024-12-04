@@ -15,12 +15,88 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
     width: calc(100% - 40px);
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.body-discover{
+    display: flex;
+    flex-direction: column; /* Ensures body elements are stacked vertically */
+    min-height: 100vh; /* Makes the body at least the height of the viewport */
+    margin: 0; /* Removes default body margins */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+
+}
+
+.sidebar {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-right: 2px solid #ccc;
+}
+
+.sidebar-section ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-section li {
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease-in-out; 
+}
+
+.sidebar-section li:hover {
+    white-space: normal; 
+    overflow: visible; 
+    background-color: #f4f4f4; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+.sidebar-section strong {
+    color: #01345b; 
 }
 
 img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 15px;
+}
+
+figure {
+    margin: 0; /* Remove default figure margins */
+    text-align: center; /* Center align the image and caption */
+}
+
+figcaption {
+    margin-top: 10px; /* Space between image and caption */
+    font-size: 1rem; /* Adjust caption font size */
+    color: var(--text-color); /* Ensure consistent text color */
+    font-style: italic; /* Optional: make captions italic */
+}
+
+.lazy {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.lazy:hover {
+    transform: scale(1.05);
 }
 
 main h2 {
@@ -32,9 +108,21 @@ main h2 {
 .main-content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: 20px;
+    gap: 20px; 
     margin-top: 20px;
+}
 
+.main-content h1 {
+    margin: 0; 
+    font-size: 2rem; 
+}
+
+.main-content-discover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    gap: 20px; 
 }
 
 footer {
@@ -43,6 +131,16 @@ footer {
     padding: 20px;
     background-color: #f4f4f4;
     color: #555;
+}
+
+.footer-discover {
+    width: 100%; /* Ensures the footer spans the entire width */
+    background-color: #01345b; /* Optional: Add a background color */
+    color: white; /* Optional: Ensure text color contrasts with background */
+    text-align: center; /* Center-align the text */
+    padding: 10px 0; /* Add vertical padding */
+    position: relative; /* Keep it positioned normally */
+    bottom: 0; /* Ensure it sticks to the bottom if necessary */
 }
 
 .visually-hidden {
