@@ -1,0 +1,19 @@
+<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background -->
+            <rect width="800" height="200" fill="#f5f5f5"/>
+            
+            <!-- Logo Area -->
+            <circle cx="100" cy="100" r="40" fill="#ddd"/>
+            <text x="160" y="110" font-family="Arial" font-size="24" fill="#333">Your Book Club</text>
+            
+            <!-- Navigation Menu -->
+            <rect x="400" y="85" width="320" height="30" fill="#eee"/>
+            <text x="420" y="105" font-family="Arial" font-size="14" fill="#666">Home | Browse | Members | Events | Contact</text>
+            
+            <!-- Tagline -->
+            <text x="160" y="140" font-family="Arial" font-size="16" fill="#666">Connect. Read. Share.</text>
+            
+            <!-- Search Bar -->
+            <rect x="600" y="40" width="150" height="30" fill="#fff" stroke="#ddd"/>
+            <text x="615" y="60" font-family="Arial" font-size="12" fill="#999">Search books...</text>
+          </svg>

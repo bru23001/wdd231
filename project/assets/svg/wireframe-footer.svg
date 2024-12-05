@@ -1,0 +1,23 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Footer Background -->
+            <rect x="0" y="0" width="800" height="300" fill="#f5f5f5"/>
+            
+            <!-- Left Column: Mission Statement -->
+            <text x="50" y="50" font-family="Arial" font-size="24" fill="#333">Your Book Club</text>
+            <text x="50" y="80" font-family="Arial" font-size="14" fill="#666" width="200">Connecting LDS readers</text>
+            <text x="50" y="95" font-family="Arial" font-size="14" fill="#666" width="200">through the power of literature</text>
+            <!-- Center Column: Quick Links -->
+            <text x="300" y="50" font-family="Arial" font-size="16" fill="#333">Quick Links</text>
+            <text x="300" y="90" font-family="Arial" font-size="14" fill="#666">Find a Club</text>
+            <text x="300" y="120" font-family="Arial" font-size="14" fill="#666">Start a Club</text>
+            <text x="300" y="150" font-family="Arial" font-size="14" fill="#666">Book Recommendations</text>
+            
+            <!-- Right Column: Connect -->
+            <text x="550" y="50" font-family="Arial" font-size="16" fill="#333">Connect With Us</text>
+            <text x="550" y="90" font-family="Arial" font-size="14" fill="#666">Email Newsletter</text>
+            <text x="550" y="120" font-family="Arial" font-size="14" fill="#666">Social Media</text>
+            
+            <!-- Bottom Bar -->
+            <rect x="0" y="250" width="800" height="50" fill="#eee"/>
+            <text x="50" y="280" font-family="Arial" font-size="12" fill="#999">© 2024 Your Book Club | Privacy Policy | Terms of Service</text>
+           </svg>
