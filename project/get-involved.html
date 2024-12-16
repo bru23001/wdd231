@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The LDS premier destination for literary exploration and community">
+    <meta name="description"
+        content="The LDS premier destination for literary exploration and community">
     <meta name="author" content="Victor J. Brun">
-    <title>Your Book Club - Site Plan</title>
+    <title>Your Book Club - Get Involved</title>
 
     <link rel="stylesheet" href="styles/content-sections.css">
     <link rel="stylesheet" href="styles/variables.css">
@@ -22,25 +23,25 @@
     <link rel="stylesheet" href="styles/form.css">
 
     <script src="scripts/main.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto+Slab:wght@100..900&display=swap"
+    <link link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    
 
 </head>
 
 <body>
 
     <header>
-        
+
         <div class="container flex-container">
             <div class="logo-container">
                 <img src="images/bookclub.webp" alt="Your Book Club Logo">
             </div>
-            
+
             <nav>
                 <ul class="nav-links">
                     <li><a href="siteplan.html" class="active">Home</a></li>
@@ -52,37 +53,47 @@
                         <a href="login.html" class="cta-button-2">Log in</a>
                     </li>
                 </ul>
-                <button id="menu" class="menu-button" aria-label="Toggle menu">☰</button>
+                <button id="menu" class="menu-button"
+                    aria-label="Toggle menu">☰</button>
             </nav>
         </div>
     </header>
     <main>
         <section class="hero-section">
-            <div class="container">
-                <div class="tagline">
-                    <h1>Connecting Readers, Inspiring Minds</h1>
+            <div class="hero-content">
+                <h1>Join the Reading Revolution</h1>
+                <p>
+                    Find local book clubs, start discussions, and connect with
+                    readers
+                    who share your passion for great stories.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#find-club" class="button button-primary">Find a
+                        Book Club</a>
+                    <a href="#start-club" class="button button-secondary">Start
+                        Your Own</a>
                 </div>
             </div>
         </section>
 
-        
+
 
         <section id="find-club" class="content-section">
             <div class="container monthly-pick-header">
                 <h2>Book Clubs Near You</h2>
-                </div>
-
                 <div class="search-content two-column">
                     <div class="search-filters">
                         <form class="search-form">
                             <div class="form-group">
                                 <label for="location">Location</label>
-                                <input 
-                                    type="text" id="location" name="location" placeholder="Enter your location" class="input-field" required>
+                                <input type="text" id="location" name="location"
+                                    placeholder="Enter your location"
+                                    class="input-field" required>
                             </div>
                             <div class="form-group">
                                 <label for="distance">Search Radius</label>
-                                <select id="distance" name="distance" class="input-field" required>
+                                <select id="distance" name="distance"
+                                    class="input-field" required>
                                     <option value="">Select distance</option>
                                     <option value="5">Within 5 miles</option>
                                     <option value="10">Within 10 miles</option>
@@ -92,31 +103,43 @@
                             </div>
                             <div class="form-group">
                                 <label for="genre">Book Genre</label>
-                                <select id="genre" name="genre" class="input-field">
+                                <select id="genre" name="genre"
+                                    class="input-field">
                                     <option value="">All Genres</option>
                                     <option value="fiction">Fiction</option>
                                     <option value="mystery">Mystery</option>
-                                    <option value="scifi">Science Fiction</option>
-                                    <option value="nonfiction">Non-Fiction</option>
+                                    <option value="scifi">Science Fiction
+                                    </option>
+                                    <option value="nonfiction">Non-Fiction
+                                    </option>
                                 </select>
                             </div>
-                            <button type="submit" class="cta-button-1">Find Book Clubs</button>
+                            <button type="submit" class="cta-button-1">Find Book
+                                Clubs</button>
                         </form>
                     </div>
+                </div>
                     <div class="club-list">
                         <article class="club-card">
                             <h3>Downtown Readers</h3>
-                            <p><span aria-label="Location">📍</span> Central Library, Main St</p>
-                            <p><span aria-label="Currently Reading">📚</span> Currently Reading: "Society of Lies"</p>
-                            <p><span aria-label="Meeting Time">🕒</span> Meets every Tuesday at 6 PM</p>
+                            <p><span aria-label="Location">📍</span> Central
+                                Library, Main St</p>
+                            <p><span aria-label="Currently Reading">📚</span>
+                                Currently Reading: "Society of Lies"</p>
+                            <p><span aria-label="Meeting Time">🕒</span> Meets
+                                every
+                                Tuesday at 6 PM</p>
                             <button class="cta-button-1">Join Group</button>
                         </article>
-        
+
                         <article class="club-card">
                             <h3>Mystery Lovers Book Club</h3>
-                            <p><span aria-label="Location">📍</span> Cozy Corner Café, Oak Ave</p>
-                            <p><span aria-label="Genre Focus">📚</span> Focus: Mystery & Thriller</p>
-                            <p><span aria-label="Meeting Time">🕒</span> Meets monthly - First Saturday</p>
+                            <p><span aria-label="Location">📍</span> Cozy Corner
+                                Café, Oak Ave</p>
+                            <p><span aria-label="Genre Focus">📚</span> Focus:
+                                Mystery & Thriller</p>
+                            <p><span aria-label="Meeting Time">🕒</span> Meets
+                                monthly - First Saturday</p>
                             <button class="cta-button-1">Join Group</button>
                         </article>
                     </div>
@@ -125,18 +148,26 @@
         </section>
 
         <section class="newsletter-section">
-            <div class="container text-center">
-                <h3>Join the Newsletter</h3>
-                <p>Dive into the latest from Your Book Club</p>
-                <form id="newsletter-form" class="newsletter-form">
+            <div class="newsletter-content">
+                <h3>Join Our Reading Community</h3>
+                <p>Get weekly book recommendations and stay updated with the
+                    latest literary news.</p>
+                <form class="newsletter-form" id="newsletter-form">
                     <div class="input-container">
                         <label for="newsletter-email">Email Address</label>
                         <div class="input-field">
-                            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Enter your email" aria-label="Email address for newsletter subscription" required>
-                            <button type="submit" class="cta-button-1">Subscribe</button>
+                            <input type="email" id="newsletter-email"
+                                name="newsletter-email"
+                                placeholder="Enter your email address"
+                                aria-label="Email address for newsletter subscription"
+                                required>
+                            <button type="submit" class="cta-button-1">
+                                Subscribe
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
+                        <span class="error-message" role="alert"></span>
                     </div>
-                    <span class="error-message" role="alert"></span>
                 </form>
             </div>
         </section>
@@ -145,13 +176,26 @@
 
     <footer>
         <div class="container">
-            <p>©<span id="current-year"></span> Your Book Club. All Rights Reserved.</p>
+            <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸
+            </p>
             <p>Last Modification: <span id="last-modified"></span></p>
             <div class="social-icons mt-medium">
-                <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
-                <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
-                <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
-                <a href="#"><img src="images/tiktok.svg" alt="TikTok"></a>
+                <a href="https://instagram.com/yourbookclub"
+                    aria-label="Follow us on Instagram">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://facebook.com/yourbookclub"
+                    aria-label="Follow us on Facebook">
+                    <img src="images/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/yourbookclub"
+                    aria-label="Follow us on Twitter">
+                    <img src="images/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://tiktok.com/@yourbookclub"
+                    aria-label="Follow us on TikTok">
+                    <img src="images/tiktok.svg" alt="TikTok">
+                </a>
             </div>
         </div>
     </footer>

@@ -2,59 +2,36 @@
 ====================================CONTENT_SECTIONS==================================
 ====================================================================================*/
 
-.content-section {
-  padding: var(--spacing-large) 0;
-}
+/* General Section Styles */
+.content-section,
 .monthly-pick {
   padding: var(--spacing-large) 0;
 }
 
-.monthly-pick-header,.featured-books-header {
-  
-  padding: 1px 20px;
-  margin-bottom: 30px;
+/* Section Headers */
+.monthly-pick-header,
+.featured-books-header {
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
   text-align: center;
 }
-.monthly-pick-header h2, .featured-books-header h2 {
+
+.monthly-pick-header h2,
+.featured-books-header h2 {
   margin: 0;
-  font-size: 40px;
+  font-size: var(--h2-size);
   color: var(--secondary-color);
 }
+
+/* Monthly Pick Specific */
 .monthly-pick-content {
   background-color: var(--background-color);
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-md);
 }
-#monthly-pick .book-showcase {
+
+.book-showcase {
   text-align: center;
-}
-/* Featured Books Grid */
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-medium);
-  padding: 20px;
-}
-
-.content-grid img {
-  width: 100%;
-}
-/* Book Card */
-.book-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.book-card:hover {
-  transform: translateY(-5px);
-}
-
-.book-card img {
-  width: 50%;
-  height: 300px;
 }
 
 .book-showcase img {
@@ -62,25 +39,94 @@
   object-fit: cover;
 }
 
+/* Book Grid Layout */
+.monthly-pick .content-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 600px);
+  justify-content: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+
+
+/* Book Card Base */
+.monthly-pick .book-card {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--box-shadow-lg);
+}
+
+/* Book Cover */
+.monthly-pick .book-cover {
+  position: relative;
+  padding-top: 150%;
+  background: var(--surface-color);
+  overflow: hidden;
+}
+
+.monthly-pick .book-cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-card:hover .book-cover img {
+  transform: scale(1.05);
+}
+
+.monthly-pick .featured-book {
+  background: var(--background-color);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  box-shadow: var(--box-shadow-md);
+}
+
+.monthly-pick .featured-book:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--box-shadow-lg);
+}
+
+
+/* Book Content */
 .book-content {
-  padding: 20px;
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: linear-gradient(to bottom,
+      var(--background-color) 0%,
+      var(--surface-color) 100%);
 }
 
 .book-content h3 {
-  color: var(--primary-color);
-  font-size: 1.4em;
-  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--secondary-color);
 }
 
 .book-content .author {
-  color: var(--accent-color-1);
-  font-size: 1.1em;
-  margin: 5px 0;
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
 }
 
 .book-content .description {
+  font-size: 0.875rem;
   color: var(--text-color);
-  margin: 10px 0;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+  flex-grow: 1;
 }
 
 /* Star Rating */
@@ -92,11 +138,11 @@
   overflow: hidden;
   position: relative;
   width: 5.4em;
+  margin: var(--spacing-xs) 0;
 }
 
 .star-rating::before {
   content: "★★★★★";
-  float: left;
   top: 0;
   left: 0;
   position: absolute;
@@ -105,7 +151,6 @@
 
 .star-rating span {
   overflow: hidden;
-  float: left;
   top: 0;
   left: 0;
   position: absolute;
@@ -120,4 +165,160 @@
   color: #ffd700;
 }
 
+/* Book Card Actions */
+.book-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: auto;
+}
 
+.book-actions .cta-button-1 {
+  flex: 1;
+}
+
+/* Quick Actions */
+.quick-actions {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all var(--transition-normal);
+}
+
+.book-card:hover .quick-actions {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.action-button {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--background-color);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.action-button:hover {
+  background: var(--primary-color);
+  color: var(--light-text-color);
+}
+
+/* Category Tag */
+.category-tag {
+  position: absolute;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--light-text-color);
+  padding: 4px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+}
+
+/* Find Club Section */
+.find-club {
+  background: linear-gradient(135deg, var(--background-color), var(--surface-color));
+  padding: var(--spacing-2xl) 0;
+}
+
+.club-list {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.club-card {
+  background: var(--background-color);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--box-shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.club-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.club-card h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+}
+
+/* Search Section */
+.search-section {
+  background: var(--background-color);
+  padding: var(--spacing-2xl) 0;
+}
+
+.search-controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.search-input {
+  position: relative;
+  flex: 1;
+}
+
+.search-input input {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3rem;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  background: var(--surface-color);
+  transition: all 0.3s ease;
+}
+
+.search-input::before {
+  content: '🔍';
+  position: absolute;
+  left: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.filter-control {
+  padding: var(--spacing-md);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  background: var(--surface-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-control:hover {
+  background: var(--background-color);
+  border-color: var(--primary-color);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .monthly-pick .content-grid {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-md);
+  }
+
+  .book-showcase img {
+    width: 70%;
+  }
+}

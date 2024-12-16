@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="The LDS premier destination for literary exploration and community">
-        <meta name="author" content="Victor J. Brun">
-        <title>Must Reads - Your Book Club</title>
-        
-        <link rel="stylesheet" href="styles/content-sections.css">
-        <link rel="stylesheet" href="styles/variables.css">
-        <link rel="stylesheet" href="styles/typography.css">
-        <link rel="stylesheet" href="styles/responsive.css">
-        <link rel="stylesheet" href="styles/components.css">
-        <link rel="stylesheet" href="styles/layout.css">
-        <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/newsletter.css">
-        <link rel="stylesheet" href="styles/footer.css">
-        <link rel="stylesheet" href="styles/header.css">
-        <link rel="stylesheet" href="styles/hero.css">
-        <link rel="stylesheet" href="styles/form.css">
 
-        <script src="scripts/main.js" defer></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto+Slab:wght@100..900&display=swap"
-            rel="stylesheet">
-        
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="The LDS premier destination for literary exploration and community">
+    <meta name="author" content="Victor J. Brun">
+    <title>Must Reads - Your Book Club</title>
+
+    <link rel="stylesheet" href="styles/content-sections.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/newsletter.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/form.css">
+
+    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
 <body>
     <header>
         <div class="container flex-container">
@@ -36,7 +40,7 @@
                 <img src="images/bookclub.webp" alt="Your Book Club Logo">
             </div>
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="siteplan.html" class="active">Home</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="get-involved.html">Get Involved</a></li>
@@ -46,79 +50,176 @@
                         <a href="login.html" class="cta-button-2">Log in</a>
                     </li>
                 </ul>
-                <button id="menu" class="menu-button" aria-label="Toggle menu">☰</button>
+                <button id="menu" class="menu-button"
+                    aria-label="Toggle menu">☰</button>
             </nav>
         </div>
     </header>
-    
+
 
 
     <main>
         <section class="hero-section">
-            <div class="container">
-                <div class="tagline">
-                    <h1>Connecting Readers, Inspiring Minds</h1>
+            <div class="hero-content">
+                <h1>Curated Collections</h1>
+                <p>
+                    Explore hand-picked selections of must-read books across
+                    genres,
+                    from timeless classics to contemporary masterpieces.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#featured-books" class="button button-primary">View
+                        Selection</a>
+                    <a href="book-search.html"
+                        class="button button-secondary">Search Books</a>
                 </div>
             </div>
         </section>
 
-        <div class="container monthly-pick-header">
-            <h2>Featured Books</h2>
-            
-            <section class="content-grid">
-                <div class="book-card">
-                    <img src="images/book1-400x600.webp" alt="The Waiting" loading="lazy">
-                    <div class="book-content">
-                        <h3>The Waiting</h3>
-                        <div class="star-rating">
-                            <span style="width: 75%;"></span>
+        <section class="content-section">
+            <div class="container">
+                <div class="monthly-pick-header">
+                    <h2>Featured Books</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="images/book1-400x600.webp"
+                                alt="The Waiting" loading="lazy">
+                            <span class="category-tag">Mystery</span>
+                            <div class="quick-actions">
+                                <button class="action-button"
+                                    aria-label="Add to favorites">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-button"
+                                    aria-label="Add to reading list">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                                <button class="action-button"
+                                    aria-label="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
                         </div>
-                        <p class="author">Michael Connelly</p>
-                        <p class="description">A case gone cold, two detectives on the hunt, and everyone with their own personal agenda. Terrifying twists and addictive action makes this another hit from Michael Connelly.</p>
-                        <a href="must-reads.html" class="cta-button-1">Learn More</a>
+                        <div class="book-content">
+                            <h3>The Waiting</h3>
+                            <p class="author">Michael Connelly</p>
+                            <div class="star-rating">
+                                <span style="width: 75%;"></span>
+                            </div>
+                            <p class="description">A case gone cold, two
+                                detectives on the hunt, and everyone with their
+                                own personal agenda. Terrifying twists and
+                                addictive action makes this another hit from
+                                Michael Connelly.</p>
+                            <div class="book-actions">
+                                <a href="must-reads.html"
+                                    class="cta-button-1">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="images/book2-400x600.webp"
+                                alt="Identity Unknown" loading="lazy">
+                            <span class="category-tag">Thriller</span>
+                            <div class="quick-actions">
+                                <button class="action-button"
+                                    aria-label="Add to favorites">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-button"
+                                    aria-label="Add to reading list">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                                <button class="action-button"
+                                    aria-label="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="book-content">
+                            <h3>Identity Unknown</h3>
+                            <p class="author">Patricia Cornwell</p>
+                            <div class="star-rating">
+                                <span style="width: 67%;"></span>
+                            </div>
+                            <p class="description">Death reveals all — even the
+                                unexplainable phenomena deep in the woods. This
+                                is no ordinary murder mystery...</p>
+                            <div class="book-actions">
+                                <a href="must-reads.html"
+                                    class="cta-button-1">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card">
+                        <div class="book-cover">
+                            <img src="images/book3-400x600.webp"
+                                alt="Intermezzo" loading="lazy">
+                            <span class="category-tag">Romance</span>
+                            <div class="quick-actions">
+                                <button class="action-button"
+                                    aria-label="Add to favorites">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                                <button class="action-button"
+                                    aria-label="Add to reading list">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                                <button class="action-button"
+                                    aria-label="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="book-content">
+                            <h3>Intermezzo</h3>
+                            <p class="author">Sally Rooney</p>
+                            <div class="star-rating">
+                                <span style="width: 64%;"></span>
+                            </div>
+                            <p class="description">We all caught the Sally
+                                Rooney bug with her stunning debut Conversations
+                                with Friends — now we're ready to fall in love
+                                all over again. Intermezzo absolutely soars with
+                                complicated relationships (romantic and
+                                familial) and the signature writing we can't get
+                                enough of from a literary icon.</p>
+                            <div class="book-actions">
+                                <a href="must-reads.html"
+                                    class="cta-button-1">Learn More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            
-                <div class="book-card">
-                    <img src="images/book2-400x600.webp" alt="Identity Unknown" loading="lazy">
-                    <div class="book-content">
-                        <h3>Identity Unknown</h3>
-                        <div class="star-rating">
-                            <span style="width: 67%;"></span>
-                        </div>
-                        <p class="author">Patricia Cornwell</p>
-                        <p class="description">Death reveals all — even the unexplainable phenomena deep in the woods. This is no ordinary murder mystery...</p>
-                        <a href="must-reads.html" class="cta-button-1">Learn More</a>
-                    </div>
-                </div>
-            
-                <div class="book-card">
-                    <img src="images/book3-400x600.webp" alt="Intermezzo" loading="lazy">
-                    <div class="book-content">
-                        <h3>Intermezzo</h3>
-                        <div class="star-rating">
-                            <span style="width: 64%;"></span>
-                        </div>
-                        <p class="author">Sally Rooney</p>
-                        <p class="description">We all caught the Sally Rooney bug with her stunning debut Conversations with Friends — now we’re ready to fall in love all over again. Intermezzo absolutely soars with complicated relationships (romantic and familial) and the signature writing we can’t get enough of from a literary icon.</p>
-                        <a href="must-reads.html" class="cta-button-1">Learn More</a>
-                    </div>
-                </div>
-            </section>
-        </div>    
+            </div>
+        </section>
+
         <section class="newsletter-section">
-            <div class="container text-center">
-                <h3>Join the Newsletter</h3>
-                <p>Dive into the latest from Your Book Club</p>
-                <form id="newsletter-form" class="newsletter-form">
+            <div class="newsletter-content">
+                <h3>Join Our Reading Community</h3>
+                <p>Get weekly book recommendations and stay updated with the
+                    latest literary news.</p>
+                <form class="newsletter-form" id="newsletter-form">
                     <div class="input-container">
                         <label for="newsletter-email">Email Address</label>
                         <div class="input-field">
-                            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Enter your email" aria-label="Email address for newsletter subscription" required>
-                            <button type="submit" class="cta-button-1">Subscribe</button>
+                            <input type="email" id="newsletter-email"
+                                name="newsletter-email"
+                                placeholder="Enter your email address"
+                                aria-label="Email address for newsletter subscription"
+                                required>
+                            <button type="submit" class="cta-button-1">
+                                Subscribe
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
+                        <span class="error-message" role="alert"></span>
                     </div>
-                    <span class="error-message" role="alert"></span>
                 </form>
             </div>
         </section>
@@ -127,7 +228,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 id="modal-title"></h2>
-                    <button class="close-modal" aria-label="Close modal">&times;</button>
+                    <button class="close-modal"
+                        aria-label="Close modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <img id="modal-image" src="" alt="" loading="lazy">
@@ -144,27 +246,42 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="cta-button-1" id="add-to-cart">Add to Cart</button>
+                    <button class="cta-button-1" id="add-to-cart">Add to
+                        Cart</button>
                     <button class="cta-button-2 close-modal">Close</button>
                 </div>
             </div>
         </dialog>
     </main>
-    
+
 
     <footer>
         <div class="container">
-            <p>©<span id="current-year"></span> Your Book Club. All Rights Reserved.</p>
+            <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸
+            </p>
             <p>Last Modification: <span id="last-modified"></span></p>
             <div class="social-icons mt-medium">
-                <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
-                <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
-                <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
-                <a href="#"><img src="images/tiktok.svg" alt="TikTok"></a>
+                <a href="https://instagram.com/yourbookclub"
+                    aria-label="Follow us on Instagram">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://facebook.com/yourbookclub"
+                    aria-label="Follow us on Facebook">
+                    <img src="images/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/yourbookclub"
+                    aria-label="Follow us on Twitter">
+                    <img src="images/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://tiktok.com/@yourbookclub"
+                    aria-label="Follow us on TikTok">
+                    <img src="images/tiktok.svg" alt="TikTok">
+                </a>
             </div>
         </div>
     </footer>
 
-    
+
 </body>
+
 </html>

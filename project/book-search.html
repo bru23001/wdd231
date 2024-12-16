@@ -22,7 +22,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link
+    link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"         
+        rel="stylesheet">
 
     <script src="scripts/books.js" defer type="module"></script>
 <script src="scripts/searchService.js" defer type="module"></script>
@@ -52,9 +54,15 @@
 
     <main>
         <section class="hero-section">
-            <div class="container">
-                <div class="tagline">
-                    <h1>Discover Your Next Read</h1>
+            <div class="hero-content">
+                <h1>Discover Your Next Read</h1>
+                <p>
+                    Explore our curated collection of books and find your perfect match 
+                    with advanced search and filtering options.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#search-section" class="button button-primary">Start Searching</a>
+                    <a href="must-reads.html" class="button button-secondary">View Featured</a>
                 </div>
             </div>
         </section>
@@ -109,18 +117,28 @@
         </section>
 
         <section class="newsletter-section">
-            <div class="container text-center">
-                <h3>Join the Newsletter</h3>
-                <p>Stay updated with our latest book recommendations</p>
-                <form id="newsletter-form" class="newsletter-form">
+            <div class="newsletter-content">
+                <h3>Join Our Reading Community</h3>
+                <p>Get weekly book recommendations and stay updated with the latest literary news.</p>
+                <form class="newsletter-form" id="newsletter-form">
                     <div class="input-container">
                         <label for="newsletter-email">Email Address</label>
                         <div class="input-field">
-                            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Enter your email" aria-label="Email address for newsletter subscription" required>
-                            <button type="submit" class="cta-button-1">Subscribe</button>
+                            <input 
+                                type="email" 
+                                id="newsletter-email" 
+                                name="newsletter-email" 
+                                placeholder="Enter your email address" 
+                                aria-label="Email address for newsletter subscription" 
+                                required
+                            >
+                            <button type="submit" class="cta-button-1">
+                                Subscribe
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
                         </div>
+                        <span class="error-message" role="alert"></span>
                     </div>
-                    <span class="error-message" role="alert"></span>
                 </form>
             </div>
         </section>
@@ -128,13 +146,26 @@
 
     <footer>
         <div class="container">
-            <p>©<span id="current-year"></span> Your Book Club. All Rights Reserved.</p>
+            <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸
+            </p>
             <p>Last Modification: <span id="last-modified"></span></p>
             <div class="social-icons mt-medium">
-                <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
-                <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
-                <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
-                <a href="#"><img src="images/tiktok.svg" alt="TikTok"></a>
+                <a href="https://instagram.com/yourbookclub"
+                    aria-label="Follow us on Instagram">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://facebook.com/yourbookclub"
+                    aria-label="Follow us on Facebook">
+                    <img src="images/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/yourbookclub"
+                    aria-label="Follow us on Twitter">
+                    <img src="images/twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://tiktok.com/@yourbookclub"
+                    aria-label="Follow us on TikTok">
+                    <img src="images/tiktok.svg" alt="TikTok">
+                </a>
             </div>
         </div>
     </footer>

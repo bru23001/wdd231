@@ -107,6 +107,19 @@
         width: 95%;
         margin: 10px;
     }
+
+    .search-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container {
+        margin: var(--spacing-md);
+        padding: var(--spacing-lg);
+    }
+
+    .club-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 

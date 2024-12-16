@@ -1,10 +1,33 @@
-form {
-    margin: var(--spacing-medium) auto;
-    border: 1px solid var(--border-color);
-    padding: var(--spacing-medium);
-    background-color: var(--background-color);
-    border-radius: var(--border-radius);
-    max-width: 500px;
+.form-container {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--box-shadow-lg);
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 2px, transparent 0);
+  background-size: 40px 40px;
+  opacity: 0.3;
+}
+
+.form-container form {
+  position: relative;
+  z-index: 1;
+  background: var(--background-color);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
 .checkbox-group {
@@ -156,6 +179,44 @@ select:focus,
 textarea:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
+}
+
+/* Contact Section */
+.contact-section {
+  background: var(--surface-color);
+  padding: var(--spacing-2xl) 0;
+}
+
+.contact-form {
+  display: grid;
+  gap: var(--spacing-lg);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  background: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  outline: none;
 }
 
 [role="alert"] {
