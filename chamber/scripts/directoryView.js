@@ -1,10 +1,134 @@
+// Import utilities
+import { displayError, getLocalStorage, setLocalStorage } from './utils.js';
+
+
+class DirectoryManager {
+    constructor() {
+        this.businessList = document.querySelector('.business-cards');
+        this.viewPreference = getLocalStorage('viewPreference') || 'grid';
+        this.init();
+    }
+
+    async init() {
+        await this.loadBusinessData();
+        this.setupViewToggle();
+        this.setupLazyLoading();
+        this.applyViewPreference();
+    }
+
+    async loadBusinessData() {
+        try {
+            const response = await fetch('data/businesses.json');
+            if (!response.ok) throw new Error('Failed to fetch business data');
+            const companies = await response.json();
+            
+            const isIndexPage = window.location.pathname.includes('index.html');
+            const companiesToDisplay = isIndexPage ? 
+                this.getSpotlightCompanies(companies, 3) : 
+                companies;
+            
+            this.renderCompanies(companiesToDisplay);
+        } catch (error) {
+            displayError(this.businessList, 'Error loading business data');
+        }
+    }
+
+    getSpotlightCompanies(companies, count) {
+        const premium = companies.filter(company => 
+            company.membershipLevel >= 2
+        );
+        return this.shuffleArray(premium).slice(0, count);
+    }
+
+    shuffleArray(array) {
+        return [...array].sort(() => Math.random() - 0.5);
+    }
+
+    renderCompanies(companies) {
+        this.businessList.innerHTML = companies.map(company => `
+            <div class="card">
+                <img src="${company.image}" 
+                     alt="${company.name} Logo" 
+                     class="business-image lazy"
+                     data-src="${company.image}">
+                <div class="contact-info">
+                    <h4>${company.name}</h4>
+                    <p class="subtitle">${company.subtitle}</p>
+                    <p><strong>Address:</strong> ${company.address}</p>
+                    <p><strong>Phone:</strong> ${company.phone}</p>
+                    <p><strong>Email:</strong> <a href="mailto:${company.email}">${company.email}</a></p>
+                    <p><strong>Website:</strong> <a href="${company.website}" target="_blank">${company.website}</a></p>
+                    ${company.membershipLevel > 1 ? '<span class="premium-badge">Premium Member</span>' : ''}
+                </div>
+            </div>
+        `).join('');
+    }
+
+    setupViewToggle() {
+        const gridBtn = document.getElementById('grid');
+        const listBtn = document.getElementById('list');
+
+        if (gridBtn && listBtn) {
+            gridBtn.addEventListener('click', () => this.setView('grid'));
+            listBtn.addEventListener('click', () => this.setView('list'));
+        }
+    }
+
+    setView(viewMode) {
+        this.businessList.classList.remove('grid-view', 'list-view');
+        this.businessList.classList.add(`${viewMode}-view`);
+        setLocalStorage('viewPreference', viewMode);
+    }
+
+    applyViewPreference() {
+        this.setView(this.viewPreference);
+    }
+
+    setupLazyLoading() {
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        observer.unobserve(img);
+                    }
+                });
+            },
+            { rootMargin: '50px' }
+        );
+
+        document.querySelectorAll('.lazy').forEach(img => 
+            observer.observe(img)
+        );
+    }
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    new DirectoryManager();
+});
+
+export { DirectoryManager };
+
+
+/* const darkModeToggle = document.querySelector('.dark-mode-toggle');
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+// Set current year and last modified date in footer
+document.getElementById('current-year').textContent = new Date().getFullYear();
+document.getElementById('last-modified').textContent = document.lastModified;
+
 // ===================================================================================
 // ========================= DIRECTORY VIEW TOGGLE ==================================
 // ===================================================================================
 /**
  * This module manages the toggle between grid and list views for the business 
  * directory on the Chamber website.
- */
+ 
 
 // Function to fetch and display companies from a JSON file
 async function displayCompanies() {
@@ -66,18 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-function getMembershipLevel(level) {
-    switch (level) {
-        case 1:
-            return 'Silver';
-        case 2:
-            return 'Gold';
-        case 3:
-            return 'Platinum';
-        default:
-            return 'Unknown';
-    }
-}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
@@ -112,13 +225,6 @@ async function toggleView() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const membershipCards = document.querySelector(".membership-cards");
-    if (membershipCards) {
-        // Add the "loaded" class to trigger the CSS animation
-        membershipCards.classList.add("loaded");
-    }
-});
 
 // Lazy loading images
 document.addEventListener("DOMContentLoaded", function () {
@@ -140,28 +246,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Visitor tracking
-const visitorMessage = document.getElementById("visitorMessage");
 
-function getDaysBetween(date1, date2) {
-    return Math.floor((date2 - date1) / (1000 * 60 * 60 * 24));
-}
 
-const lastVisit = localStorage.getItem("lastVisit");
-const currentDate = Date.now();
-
-if (!lastVisit) {
-    visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
-} else {
-    const days = getDaysBetween(Number(lastVisit), currentDate);
-    if (days < 1) {
-        visitorMessage.textContent = "Back so soon! Awesome!";
-    } else if (days === 1) {
-        visitorMessage.textContent = "You last visited 1 day ago.";
-    } else {
-        visitorMessage.textContent = `You last visited ${days} days ago.`;
-    }
-}
-
-localStorage.setItem("lastVisit", currentDate);
-
+ */

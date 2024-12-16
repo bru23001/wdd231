@@ -1,10 +1,22 @@
+/* =================================================================================== */
+/* ============================== MAIN STYLES ======================================== */
+/* =================================================================================== */
+
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 2rem;
+    font-family: var(--font-primary, Arial, sans-serif);
+    margin: var(--spacing-lg, 2rem);
+    line-height: var(--line-height-base, 1.6);
 }
 
+/* Base card styles */
+.card-base {
+    background-color: var(--card-background);
+    padding: var(--spacing-md, 15px);
+    border-radius: var(--border-radius, 5px);
+    box-shadow: var(--box-shadow, 0 2px 4px black);
+}
 
-/* Individual section styling */
 .events,
 .current-weather,
 .weather-forecast {
@@ -14,19 +26,7 @@ body {
     box-shadow: 0 2px 4px black;
 }
 
-/* Section header styling */
-.events h3,
-.current-weather h3,
-.weather-forecast h3 {
-    background-color: var(--text-color);
-    color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    text-align: center;
-}
-
-/* Hero Section Styling */
+/* Hero Section */
 .hero {
     position: relative;
     background-image: url('../images/seville.webp');
@@ -43,7 +43,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    margin: 20px;
+    margin: var(--spacing-md, 20px);
     text-align: left;
     color: white;
 }
@@ -51,61 +51,80 @@ body {
 .hero h3 {
     color: var(--background-color);
     font-size: 2rem;
-    margin: 20px;
+    margin: var(--spacing-md, 20px);
 }
 
 .hero h2 {
     color: var(--background-color);
     font-size: 1.5rem;
     font-weight: normal;
-    margin: 20px;
-
+    margin: var(--spacing-md, 20px);
 }
 
-.keynote-button,
-.button {
-    bottom: 20px;
-    right: 20px;
+/* Button styles */
+.button-base {
     padding: 10px 20px;
     background-color: var(--primary-color);
     color: var(--background-color);
     border: none;
-    border-radius: 4px;
+    border-radius: var(--border-radius, 4px);
     cursor: pointer;
     font-size: 14px;
+    transition: background-color var(--transition-base, 0.3s ease);
+}
+
+.keynote-button,
+.button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: var(--border-radius, 4px);
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color var(--transition-base, 0.3s ease);
+    bottom: 20px;
+    right: 20px;
     z-index: 2;
 }
 
-.keynote-button:hover {
-    background-color: var(--accent-color);
-}
-
-.view-btn:hover {
-    background-color: var(--accent-color);
-}
-
+.keynote-button:hover,
+.view-btn:hover,
 .join-button:hover {
     background-color: var(--accent-color);
 }
 
+/* Focus states for accessibility */
+.button-base:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Sidebar */
 .sidebar {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-right: 2px solid #ccc;
+    background-color: var(--background-color);
+    padding: var(--spacing-md, 20px);
+    border-right: 2px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    gap: 20px;
-  }
-  
-  .sidebar-section {
-    margin-bottom: 20px;
-  }
-  
-  .sidebar-section h3 {
+    gap: var(--spacing-md, 20px);
+}
+
+.sidebar-section {
+    margin-bottom: var(--spacing-md, 20px);
+}
+
+.sidebar-section h3 {
     font-size: 1.2rem;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #ccc;
+    margin-bottom: var(--spacing-sm, 10px);
+    border-bottom: 2px solid var(--border-color);
     padding-bottom: 5px;
-  }
-  
- 
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .sidebar {
+        background-color: var(--card-background);
+        border-right-color: var(--border-color);
+    }
+}

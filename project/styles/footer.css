@@ -1,0 +1,16 @@
+/*====================================================================================
+====================================FOOTER============================================
+====================================================================================*/
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  text-align: center;
+  padding: var(--spacing-medium) 0;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin: 0 var(--spacing-small);
+}

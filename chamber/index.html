@@ -10,7 +10,7 @@
     <title>Home | Seville Chamber of Commerce</title>
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
+
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/layout.css">
@@ -93,10 +93,19 @@
                     <div class="weather-icon">
                         <img id="weather-icon" src="images/1100758.webp"
                             alt="Weather Icon">
+                        <span id="icon-desc"></span>
                     </div>
+
                     <div class="weather-data">
                         <p>Temperature: <span id="current-temp"></span></p>
                         <p>Weather: <span id="current-desc"></span></p>
+                    </div>
+
+                    <div class="forecast">
+                        <h3>3-Day Forecast</h3>
+                        <p id="day1"></p>
+                        <p id="day2"></p>
+                        <p id="day3"></p>
                     </div>
                 </div>
             </section>
@@ -152,7 +161,7 @@
 
 
     <footer>
-        <h2 class="visually-hidden">Footer Information</h2> 
+        <h2 class="visually-hidden">Footer Information</h2>
         <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸</p>
         <p>Last Modification: <span id="last-modified"></span></p>
     </footer>

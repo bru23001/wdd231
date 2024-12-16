@@ -5,7 +5,7 @@
 This file contains styles for the hero section of the website.
 */
 
-.hero {
+/* .hero {
     position: relative;
     background-image: url('../images/seville.webp');
     background-size: cover;
@@ -38,4 +38,48 @@ This file contains styles for the hero section of the website.
     font-weight: normal;
     margin: 20px;
 
-}
+} */
+
+/* =================================================================================== */
+/* ============================== HERO SECTION ====================================== */
+/* =================================================================================== */
+
+.hero {
+    position: relative;
+    background-image: url('../images/seville.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    color: var(--text-color-light, white);
+    overflow: hidden;
+ }
+ 
+ .hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: var(--spacing-md, 20px);
+    text-align: left;
+    color: var(--text-color-light, white);
+    padding: var(--spacing-md, 20px);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--border-radius, 8px);
+ }
+ 
+ .hero h2,
+ .hero h3 {
+    color: var(--background-color);
+    margin: var(--spacing-md, 20px);
+ }
+ 
+ .hero h3 {
+    font-size: var(--font-size-xl, 2rem);
+ }
+ 
+ .hero h2 {
+    font-size: var(--font-size-lg, 1.5rem);
+    font-weight: normal;
+ }
+ 

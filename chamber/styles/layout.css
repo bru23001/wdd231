@@ -5,36 +5,79 @@
 This file contains general page layout styles, including body, font, and grid systems.
 */
 
+/* Base styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: var(--font-primary, Arial, sans-serif);
+    line-height: var(--line-height-base, 1.6);
     background-color: var(--background-color);
     color: var(--text-color);
-    margin: 20px;
+    margin: var(--spacing-md, 20px);
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    width: calc(100% - 40px);
+    width: calc(100% - var(--spacing-lg, 40px));
     display: grid;
     grid-template-rows: auto;
 }
 
-.body-discover{
-    display: flex;
-    flex-direction: column; /* Ensures body elements are stacked vertically */
-    min-height: 100vh; /* Makes the body at least the height of the viewport */
-    margin: 0; /* Removes default body margins */
-}
-
+/* Layout containers */
 .container {
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-gap: 20px;
-    padding: 20px;
-
+    gap: var(--spacing-md, 20px);
+    padding: var(--spacing-md, 20px);
 }
 
+/* Sidebar */
 .sidebar {
+    background-color: var(--background-color);
+    padding: var(--spacing-md, 20px);
+    border-right: 2px solid var(--border-color);
+}
+
+.sidebar-section {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: var(--spacing-sm, 10px);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: all var(--transition-base, 0.3s ease-in-out);
+        
+        &:hover {
+            white-space: normal;
+            overflow: visible;
+            background-color: var(--hover-background, #f4f4f4);
+            padding: var(--spacing-sm, 10px);
+            border-radius: var(--border-radius, 5px);
+        }
+    }
+
+    strong {
+        color: var(--primary-color, #01345b);
+    }
+}
+
+
+
+
+
+/* 
+.body-discover{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; 
+} */
+
+
+
+/* .sidebar {
     background-color: #f9f9f9;
     padding: 20px;
     border-right: 2px solid #ccc;
@@ -64,7 +107,10 @@ body {
 .sidebar-section strong {
     color: #01345b; 
 }
+ */
 
+
+/* Image handling */
 img {
     max-width: 100%;
     height: auto;
@@ -74,75 +120,92 @@ img {
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 15px;
+    gap: var(--spacing-md, 15px);
 }
 
-figure {
-    margin: 0; /* Remove default figure margins */
-    text-align: center; /* Center align the image and caption */
+/* figure {
+    margin: 0; 
+    text-align: center; 
 }
 
 figcaption {
-    margin-top: 10px; /* Space between image and caption */
-    font-size: 1rem; /* Adjust caption font size */
-    color: var(--text-color); /* Ensure consistent text color */
-    font-style: italic; /* Optional: make captions italic */
-}
+    margin-top: 10px; 
+    font-size: 1rem; 
+    color: var(--text-color); 
+    font-style: italic; 
+} */
 
+/* Lazy loading */
 .lazy {
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-base, 0.3s ease);
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &[data-loaded="false"] {
+        opacity: 0.1;
+    }
+
+    &[data-loaded="true"] {
+        opacity: 1;
+        transition: opacity var(--transition-base, 0.3s ease);
+    }
 }
 
-.lazy:hover {
-    transform: scale(1.05);
-}
-
-main h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: var(--text-color);
-}
-
+/* Main content areas */
 .main-content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: 20px; 
-    margin-top: 20px;
+    gap: var(--spacing-md, 20px);
+    margin-top: var(--spacing-md, 20px);
+
+    h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
 }
 
-.main-content h1 {
-    margin: 0; 
-    font-size: 2rem; 
-}
+/* main h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+} */
+
+
+
 
 .main-content-discover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; 
-    gap: 20px; 
+    text-align: center;
+    gap: var(--spacing-md, 20px);
 }
 
+
+/* Footer styles */
 footer {
     text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    color: #555;
+    margin-top: var(--spacing-xl, 40px);
+    padding: var(--spacing-md, 20px);
+    background-color: var(--footer-background, #f4f4f4);
+    color: var(--text-color-muted, #555);
 }
 
-.footer-discover {
-    width: 100%; /* Ensures the footer spans the entire width */
-    background-color: #01345b; /* Optional: Add a background color */
-    color: white; /* Optional: Ensure text color contrasts with background */
-    text-align: center; /* Center-align the text */
-    padding: 10px 0; /* Add vertical padding */
-    position: relative; /* Keep it positioned normally */
-    bottom: 0; /* Ensure it sticks to the bottom if necessary */
-}
+/* .footer-discover {
+    width: 100%; 
+    background-color: #01345b; 
+    color: white; 
+    text-align: center; 
+    padding: 10px 0; 
+    position: relative; 
+    bottom: 0; 
+} */
 
+/* Accessibility */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -151,4 +214,16 @@ footer {
     clip-path: inset(0 0 0 0);
     overflow: hidden;
     border: 0;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .sidebar {
+        background-color: var(--background-color-dark, #2d2d2d);
+        border-color: var(--border-color-dark, #444);
+    }
+
+    .sidebar-section li:hover {
+        background-color: var(--hover-background-dark, #3d3d3d);
+    }
 }

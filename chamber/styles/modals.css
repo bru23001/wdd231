@@ -5,7 +5,7 @@
 This file contains styles for modals displayed on the Chamber website.
 */
 
-.modal {
+/* .modal {
     display: none;
     position: fixed;
     top: 0;
@@ -71,3 +71,102 @@ This file contains styles for modals displayed on the Chamber website.
     color: #007BFF;
     cursor: pointer;
 }
+ */
+
+ /* =================================================================================== */
+/* ============================== MODAL STYLING ===================================== */
+/* =================================================================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-modal, 1000);
+    padding: var(--spacing-md, 1.5rem);
+ }
+ 
+ .modal-content {
+    background: var(--background-color, #fff);
+    padding: var(--spacing-lg, 2rem);
+    border-radius: var(--border-radius, 8px);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: var(--box-shadow, 0 4px 6px rgba(0, 0, 0, 0.1));
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+ }
+ 
+ .modal.active .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+ }
+ 
+ .close-modal {
+    margin-top: var(--spacing-md, 1rem);
+    background-color: var(--primary-color, #007BFF);
+    color: var(--background-color, #fff);
+    border: none;
+    padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem);
+    border-radius: var(--border-radius, 4px);
+    cursor: pointer;
+    transition: background-color var(--transition-base, 0.3s ease);
+ }
+ 
+ .close-modal:hover,
+ .close-modal:focus {
+    background-color: var(--primary-color-dark, #0056b3);
+ }
+ 
+ .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: var(--z-backdrop, 999);
+    opacity: 0;
+    transition: opacity var(--transition-base, 0.3s ease);
+ }
+ 
+ .modal-backdrop.active {
+    opacity: 1;
+ }
+ 
+ /* Accessibility */
+ .modal:focus-within {
+    outline: none;
+ }
+ 
+ .modal-close {
+    display: block;
+    margin-top: var(--spacing-md, 1rem);
+    color: var(--primary-color, #007BFF);
+    cursor: pointer;
+    border: none;
+    background: none;
+    text-decoration: underline;
+ }
+ 
+ /* Dark mode */
+ @media (prefers-color-scheme: dark) {
+    .modal-content {
+        background: var(--background-color-dark, #333);
+        color: var(--text-color-dark, #fff);
+    }
+ }
+ 
+ /* Animation keyframes */
+ @keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+ }

@@ -1,0 +1,170 @@
+form {
+    margin: var(--spacing-medium) auto;
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-medium);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    max-width: 500px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-text {
+    user-select: none;
+}
+
+.form-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+       
+
+label {
+    display: block;
+    margin-bottom: var(--spacing-small);
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  border-radius: var(--border-radius);
+  font-size: var(--base-font-size);
+  margin-top: var(--spacing-small);
+  margin-bottom: var(--spacing-medium);
+  padding: var(--spacing-small);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  background-color: white; 
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 1px solid var(--secondary-color); 
+}
+
+
+textarea {
+  height: 150px; 
+}
+
+button[type="submit"] {
+  background-color: var(--accent-color-1);
+  color: var(--light-text-color);
+  cursor: pointer;
+  padding: var(--spacing-small);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  font-size: var(--button-font-size);
+  width: 100%;
+}
+
+
+button[type="submit"]:hover {
+  background-color: var(--accent-color-1-darker);
+} 
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.club-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.club-card p {
+  margin: 0.5rem 0;
+}
+
+.club-card span[aria-label] {
+  margin-right: 0.5rem;
+}
+
+/* Enhanced Form Styles */
+.form-group {
+  position: relative;
+  margin-bottom: var(--spacing-medium);
+}
+
+.error-message {
+  color: var(--accent-color-1);
+  font-size: 0.875em;
+  margin-top: 4px;
+  display: block;
+}
+
+.success-message {
+  color: var(--accent-color-2);
+  background-color: var(--light-background-color);
+  padding: var(--spacing-small);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-medium);
+}
+
+input.error,
+textarea.error,
+select.error {
+  border-color: var(--accent-color-1);
+}
+
+/* Form Validation Visual Feedback */
+input:valid:not(:placeholder-shown) {
+  border-color: var(--accent-color-2);
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: var(--accent-color-1);
+}
+
+/* Accessibility Enhancements */
+.close-modal:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+[role="alert"] {
+    border-left: 4px solid var(--accent-color-1);
+    padding-left: var(--spacing-small);
+}
+
+@media (min-width: 600px) {
+  form {
+      max-width: 600px;
+  }
+}

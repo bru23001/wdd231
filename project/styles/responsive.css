@@ -1,0 +1,133 @@
+/*====================================================================================
+====================================RESPONSIVE========================================
+====================================================================================*/
+#menu {
+    display: none;
+}
+@media (max-width: 768px) {
+   
+    #menu {
+        display: block; 
+    }
+
+    .flex-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+
+    
+    .nav-links {
+        display: none; 
+    }
+
+   
+    .nav-links.open {
+        display: flex; 
+        flex-direction: column;
+        width: 100%; 
+        background-color: var(--primary-color);
+    }
+
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%; 
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        width: 100%; 
+        gap: 10px;
+    }
+
+    .nav-buttons a {
+        flex: 1;
+        max-width: 150px;
+        text-align: center;
+    }
+
+    
+    .menu-button {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+  
+    .book-card {
+        margin-bottom: var(--spacing-medium);
+    }
+
+    .newsletter__form {
+        flex-direction: column;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group input,
+    .input-group button {
+        width: 100%;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .book-card img {
+        height: 200px;
+    }
+
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-body img {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    dialog.book-modal {
+        width: 95%;
+        margin: 10px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    :root {
+        --base-font-size: 16px;
+        --nav-font-size: 18px;
+    }
+
+    .container {
+        padding: 0 var(--spacing-small);
+    }
+
+    .logo-container img {
+        width: 70px;
+    }
+
+    .nav-buttons .cta-button-1,
+    .nav-buttons .cta-button-2 {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

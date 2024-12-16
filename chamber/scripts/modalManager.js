@@ -1,12 +1,94 @@
-// ===================================================================================
-// ============================ MODAL MANAGER =======================================
-// ===================================================================================
-/**
- * This module manages the behavior of modals on the Chamber website, 
- * including opening, closing, and interaction logic.
- */
 
+class ModalManager {
+    constructor() {
+        this.modals = document.querySelectorAll('.modal');
+        this.triggers = document.querySelectorAll('.learn-more-btn');
+        this.closeButtons = document.querySelectorAll('.close-modal');
+        this.init();
+    }
+
+    init() {
+        this.setupTriggers();
+        this.setupCloseButtons();
+        this.setupOutsideClicks();
+        this.setupKeyboardHandling();
+    }
+
+    setupTriggers() {
+        this.triggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const modalId = trigger.getAttribute('data-modal');
+                this.openModal(modalId);
+            });
+        });
+    }
+
+    setupCloseButtons() {
+        this.closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                this.closeModal(button.closest('.modal'));
+            });
+        });
+    }
+
+    setupOutsideClicks() {
+        this.modals.forEach(modal => {
+            modal.addEventListener('click', event => {
+                if (event.target === modal) {
+                    this.closeModal(modal);
+                }
+            });
+        });
+    }
+
+    setupKeyboardHandling() {
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                this.closeAllModals();
+            }
+        });
+    }
+
+    openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        
+        const firstFocusable = modal.querySelector('button, [href], input, select, textarea');
+        if (firstFocusable) {
+            firstFocusable.focus();
+        }
+    }
+
+    closeModal(modal) {
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = 'auto';
+        
+        const trigger = document.querySelector(`[data-modal="${modal.id}"]`);
+        if (trigger) {
+            trigger.focus();
+        }
+    }
+
+    closeAllModals() {
+        this.modals.forEach(modal => this.closeModal(modal));
+    }
+}
+
+// Initialize
 document.addEventListener('DOMContentLoaded', () => {
+    new ModalManager();
+});
+
+export { ModalManager };
+
+
+
+/* document.addEventListener('DOMContentLoaded', () => {
     const modalButtons = document.querySelectorAll('.learn-more-btn');
     const modals = document.querySelectorAll('.modal');
     const closeButtons = document.querySelectorAll('.close-modal');
@@ -35,18 +117,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const urlParams = new URLSearchParams(window.location.search);
-    document.getElementById('firstName').textContent = urlParams.get('firstName');
-    document.getElementById('lastName').textContent = urlParams.get('lastName');
-    document.getElementById('email').textContent = urlParams.get('email');
-    document.getElementById('mobilePhone').textContent = urlParams.get('mobilePhone');
-    document.getElementById('organization').textContent = urlParams.get('organization');
-    document.getElementById('timestamp').textContent = urlParams.get('timestamp');
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const timestampInput = document.getElementById('timestamp');
-        if (timestampInput) {
-            timestampInput.value = new Date().toISOString();
-        }
-    });
-})
+}) */

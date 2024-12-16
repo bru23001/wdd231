@@ -1,0 +1,121 @@
+/*====================================================================================
+====================================HEADER============================================
+====================================================================================*/
+
+header {
+    background-color: var(--primary-color);
+    padding: var(--spacing-medium) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 30px;
+    position: relative;
+}
+/* Logo styling */
+.logo-container {
+    padding: 5px;
+}
+
+.logo-container img {
+    width: 100px; 
+    height: auto;
+    display: block;
+}
+
+.flex-container > a {
+    color: white;
+    text-decoration: none;
+    font-size: var(--nav-font-size);
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.flex-container > a:hover,
+.flex-container > a.active {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+}
+
+.nav-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+
+/* Burger Menu Button */
+
+#menu {
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+/* /* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: var(--nav-font-size);
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+}
+
+/* Add focus styles for keyboard navigation */
+.nav-link:focus {
+    outline: 2px solid var(--accent-color-1);
+    outline-offset: 2px;
+  }
+  
+  /* Add skip link for keyboard users */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
+
+ 

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The LDS premier destination for literary exploration and community">
+    <meta name="author" content="Victor J. Brun">
+    <title>Your Book Club - Join Us Page</title>
+
+    <link rel="stylesheet" href="styles/content-sections.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/newsletter.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/form.css">
+
+    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    
+
+</head>
+
+<body>
+    <header>
+        
+        <div class="container flex-container">
+            <div class="logo-container">
+                <img src="images/bookclub.webp" alt="Your Book Club Logo">
+            </div>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="siteplan.html" class="active">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="get-involved.html">Get Involved</a></li>
+                    <li><a href="join-us.html">Contact</a></li>
+                    <li class="nav-buttons">
+                        <a href="join-us.html" class="cta-button-1">Join Now</a>
+                        <a href="login.html" class="cta-button-2">Log in</a>
+                    </li>
+                </ul>
+                <button id="menu" class="menu-button" aria-label="Toggle menu">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="tagline">
+                    <h1>Connecting Readers, Inspiring Minds</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="monthly-pick-header">
+                    <h2 class="agdasima-bold">Get in Touch</h2>
+                </div>
+                
+                <p>If you have any questions, feedback, or suggestions, please feel free to contact us using the form below.</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="subject">Choose a Subject:</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Please select a subject</option>
+                            <option value="book-recommendation">Book Recommendation</option>
+                            <option value="club-membership">Club Membership</option>
+                            <option value="event-inquiry">Event Inquiry</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="contact-name">Name:</label>
+                        <input type="text" id="contact-name" name="name" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="contact-email">Email:</label>
+                        <input type="email" id="contact-email" name="email" placeholder="Enter your email" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+    
+                    <button type="submit" class="cta-button-1">Submit</button>
+                </form>
+            </div>
+        </section>
+    
+
+    
+
+        <section class="newsletter-section">
+            <div class="container text-center">
+                <h3>Join the Newsletter</h3>
+                <p>Dive into the latest from Your Book Club</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <div class="input-container">
+                        <label for="newsletter-email">Email Address</label>
+                        <div class="input-field">
+                            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Enter your email" aria-label="Email address for newsletter subscription" required>
+                            <button type="submit" class="cta-button-1">Subscribe</button>
+                        </div>
+                    </div>
+                    <span class="error-message" role="alert"></span>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>©<span id="current-year"></span> Your Book Club. All Rights Reserved.</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
+            <div class="social-icons mt-medium">
+                <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
+                <a href="#"><img src="images/tiktok.svg" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

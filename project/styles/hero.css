@@ -1,0 +1,54 @@
+/*====================================================================================
+====================================HERO_SECTION======================================
+====================================================================================*/
+
+.hero-section {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: var(--spacing-small) 0;
+    position: relative;
+}
+  
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--background-color);
+    z-index: 1;
+}
+  
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+  
+.hero-section h1 {
+    font-family: var(--heading-font-family);
+    font-size: 30px;
+    margin-bottom: var(--spacing-medium);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-medium);
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--light-text-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 24px;
+}
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search books in Your Book Club's collection">
+    <meta name="author" content="Victor J. Brun">
+    <title>Book Search - Your Book Club</title>
+    
+    <link rel="stylesheet" href="styles/content-sections.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/newsletter.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/form.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="scripts/books.js" defer type="module"></script>
+<script src="scripts/searchService.js" defer type="module"></script>
+<script src="scripts/bookSearch.js" defer type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="container flex-container">
+            <div class="logo-container">
+                <img src="images/bookclub.webp" alt="Your Book Club Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="siteplan.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="get-involved.html">Get Involved</a></li>
+                    <li><a href="join-us.html">Contact</a></li>
+                    <li class="nav-buttons">
+                        <a href="join-us.html" class="cta-button-1">Join Now</a>
+                        <a href="login.html" class="cta-button-2">Log in</a>
+                    </li>
+                </ul>
+                <button id="menu" class="menu-button" aria-label="Toggle menu">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="tagline">
+                    <h1>Discover Your Next Read</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <div class="container">
+                <form id="search-form" class="search-form">
+                    <div class="search-controls">
+                        <input type="search" id="search-input" placeholder="Search by title, author, or description..." aria-label="Search books">
+                        <select id="genre-filter" class="filter-control" aria-label="Filter by genre">
+                            <option value="">All Genres</option>
+                            <option value="Literary Fiction">Literary Fiction</option>
+                            <option value="Mystery">Mystery</option>
+                            <option value="Science Fiction">Science Fiction</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Non-Fiction">Non-Fiction</option>
+                        </select>
+                        <select id="sort-by" class="filter-control" aria-label="Sort results">
+                            <option value="relevance">Sort by Relevance</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="newest">Newest Releases</option>
+                        </select>
+                    </div>
+                    <div class="advanced-filters">
+                        <div class="price-range">
+                            <label for="min-price">Price Range:</label>
+                            <input type="number" id="min-price" placeholder="Min $" min="0" step="0.01" class="filter-control">
+                            <span>to</span>
+                            <input type="number" id="max-price" placeholder="Max $" min="0" step="0.01" class="filter-control">
+                        </div>
+                        <div class="rating-filter">
+                            <label for="min-rating">Minimum Rating:</label>
+                            <select id="min-rating" class="filter-control">
+                                <option value="">Any Rating</option>
+                                <option value="4">4+ Stars</option>
+                                <option value="3">3+ Stars</option>
+                                <option value="2">2+ Stars</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="cta-button-1">Search Books</button>
+                    </div>
+                </form>
+
+                <div id="search-stats" class="search-stats"></div>
+                
+                <div class="content-grid">
+                    <!-- Search results will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <div class="container text-center">
+                <h3>Join the Newsletter</h3>
+                <p>Stay updated with our latest book recommendations</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <div class="input-container">
+                        <label for="newsletter-email">Email Address</label>
+                        <div class="input-field">
+                            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Enter your email" aria-label="Email address for newsletter subscription" required>
+                            <button type="submit" class="cta-button-1">Subscribe</button>
+                        </div>
+                    </div>
+                    <span class="error-message" role="alert"></span>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>©<span id="current-year"></span> Your Book Club. All Rights Reserved.</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
+            <div class="social-icons mt-medium">
+                <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
+                <a href="#"><img src="images/tiktok.svg" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

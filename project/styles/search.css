@@ -1,0 +1,80 @@
+/* Search Form Styles */
+.search-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius);
+}
+
+.search-form .form-group {
+    margin-bottom: var(--spacing-medium);
+}
+
+.search-form input[type="text"],
+.search-form select {
+    width: 100%;
+    padding: var(--spacing-small);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--base-font-size);
+}
+
+.search-form select {
+    background-color: white;
+    cursor: pointer;
+}
+
+.search-results {
+    margin-top: var(--spacing-large);
+}
+
+.no-results {
+    text-align: center;
+    padding: var(--spacing-large);
+    color: var(--text-color);
+    font-style: italic;
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: var(--spacing-large);
+}
+
+.loading::after {
+    content: "Loading...";
+    display: block;
+    margin-top: var(--spacing-small);
+}
+
+.advanced-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-medium);
+    margin-top: var(--spacing-medium);
+}
+
+.price-range {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+}
+
+.price-range input {
+    width: 100px;
+}
+
+.error-message {
+    color: var(--accent-color-1);
+    padding: var(--spacing-small);
+    text-align: center;
+    font-weight: bold;
+}
+
+.search-stats {
+    margin: var(--spacing-medium) 0;
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--text-color);
+}

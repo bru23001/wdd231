@@ -1,0 +1,74 @@
+/*====================================================================================
+====================================ATTRIBUTIONS======================================
+====================================================================================*/
+
+.attribution-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-medium);
+}
+
+.attribution-section h2 {
+    color: var(--secondary-color);
+    margin: var(--spacing-large) 0 var(--spacing-medium);
+    padding-bottom: var(--spacing-small);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.attribution-section h3 {
+    color: var(--primary-color);
+    margin: var(--spacing-medium) 0 var(--spacing-small);
+    font-size: 1.5rem;
+}
+
+.attribution-content {
+    background-color: var(--background-color);
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-large);
+}
+
+.attribution-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.attribution-content li {
+    padding: var(--spacing-small) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.attribution-content li:last-child {
+    border-bottom: none;
+}
+
+.attribution-content a {
+    color: var(--accent-color-1);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.attribution-content a:hover {
+    color: var(--accent-color-1-darker);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .attribution-section {
+        padding: var(--spacing-small);
+    }
+
+    .attribution-content {
+        padding: var(--spacing-small);
+    }
+
+    .attribution-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .attribution-section h3 {
+        font-size: 1.25rem;
+    }
+}

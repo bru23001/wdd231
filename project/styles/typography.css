@@ -1,0 +1,65 @@
+/*====================================================================================
+====================================TYPOGRAPHY========================================
+====================================================================================*/
+
+.roboto-slab-body {
+  font-family: var(--body-font-family);
+  font-weight: normal;
+  font-style: normal;
+}
+.roboto-slab-nav {
+  font-family: var(--body-font-family);
+  font-weight:bold;
+  font-style: normal;
+}
+.agdasima-regular {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-style: normal;
+}
+    
+.agdasima-bold {
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font-family);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: var(--spacing-medium);
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 45px;
+  margin-bottom: var(--spacing-medium);
+/*   color: var(--primary-color);
+ */  color: white;
+  font-weight: 1;
+}
+
+h3  {
+  font-size: 40px;
+  margin-bottom: var(--spacing-medium);
+  font-weight: 100;
+}
+
+p {
+  font-size: var(--base-font-size);
+  font-weight: 400;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+  color: var(--accent-color-1);
+}

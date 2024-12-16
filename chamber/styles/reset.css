@@ -5,11 +5,85 @@
 This file contains a CSS reset for consistent styles across browsers.
 */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+
+/* =================================================================================== */
+/* ============================== CSS RESET ========================================== */
+/* =================================================================================== */
+
+/* Box sizing and base reset */
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
+/* Base elements */
+html {
+   font-size: 100%;
+   line-height: 1.15;
+   -webkit-text-size-adjust: 100%;
+}
 
+body {
+   min-height: 100vh;
+   scroll-behavior: smooth;
+   text-rendering: optimizeSpeed;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+   font-size: inherit;
+   font-weight: inherit;
+}
+
+/* Lists */
+ul, ol {
+   list-style: none;
+}
+
+/* Links */
+a {
+   text-decoration: none;
+   color: inherit;
+   background-color: transparent;
+}
+
+/* Images */
+img {
+   max-width: 100%;
+   display: block;
+   border-style: none;
+}
+
+/* Forms */
+button,
+input,
+select,
+textarea {
+   font-family: inherit;
+   font-size: 100%;
+   line-height: 1.15;
+   margin: 0;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+   border: none;
+   background-color: var(--primary-color);
+   color: var(--background-color);
+   padding: var(--spacing-sm) var(--spacing-md);
+   border-radius: var(--border-radius);
+   cursor: pointer;
+}
+
+/* Tables */
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
 

@@ -10,26 +10,19 @@
     <title>Home | Seville Chamber of Commerce</title>
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/variables.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/cards.css">
-    <link rel="stylesheet" href="styles/weather.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-    <link rel="stylesheet" href="styles/form.css">
-    <link rel="stylesheet" href="styles/modals.css">
 
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/modalManager.js" defer></script>
-    <script src="scripts/darkModeToggle.js" defer></script>
-    <script src="scripts/formHandler.js" defer></script>
-    <script src="scripts/viewToggle.js" defer></script>
-    <script src="scripts/businesses.json" defer></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/weather.js" type="module" defer></script>
+    <script src="js/directoryView.js" type="module" defer></script>
 
 
     <meta property="og:title"
@@ -43,6 +36,7 @@
 
 
 <body>
+    <!-- Header with navigation -->
     <header>
         <div class="header-container">
             <img src="images/camara-comercio-sevilla.png"
@@ -57,13 +51,14 @@
                     <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
-            <button class="dark-mode-toggle">🌗
-            </button>
+            <button class="dark-mode-toggle"
+                aria-label="Toggle dark mode">🌗</button> </button>
         </div>
     </header>
 
 
     <main>
+
         <section class="hero">
             <h3>Welcome to the City of Seville</h3>
             <h2>Connecting businesses for a thriving community.</h2>
@@ -84,42 +79,46 @@
 
             </div>
 
-            <div class="current-weather">
+            <!-- Weather section -->
+            <section class="current-weather">
                 <h3>Current Weather</h3>
                 <div class="weather-content">
                     <div class="weather-icon">
-                        <img src="images/1100758.webp" alt="Weather icon">
+                        <img src="" alt="" id="icon-desc">
+                        <span id="icon-desc" class="visually-hidden"></span>
                     </div>
                     <div class="weather-data">
                         <p>Temperature: <span id="current-temp"></span></p>
                         <p>Weather: <span id="current-desc"></span></p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="weather-forecast">
+            <section class="directory-forecast">
                 <h3>3-Day Forecast</h3>
                 <div id="weather-forecast">
                     <p id="day1"></p>
                     <p id="day2"></p>
                     <p id="day3"></p>
                 </div>
-            </div>
+            </section>
         </div>
 
+        <!-- Controls for grid/list view -->
         <div class="view-controls">
             <button id="grid" class="view-btn">⏹️ Grid</button>
             <button id="list" class="view-btn">📄 List</button>
         </div>
         <hr>
 
-        <div class="business-cards grid-view">
-
-        </div>
+        <!-- Business directory -->
+        <section class="business-cards grid-view" aria-label="Business Directory">
+            <!-- Populated by JavaScript -->
+        </section>
     </main>
 
     <footer>
-        <h2 class="visually-hidden">Footer Information</h2> 
+        <h2 class="visually-hidden">Footer Information</h2>
         <p>©<span id="current-year"></span> Victor J. Brun 🇪🇸 Spain 🇪🇸</p>
         <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
