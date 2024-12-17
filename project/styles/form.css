@@ -1,5 +1,5 @@
 .form-container {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  background: linear-gradient(135deg, var(--primary-color));
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-xl);
   box-shadow: var(--box-shadow-lg);
@@ -46,6 +46,7 @@
 
 .checkbox-text {
     user-select: none;
+    
 }
 
 .form-links {
@@ -92,15 +93,17 @@ textarea {
 }
 
 button[type="submit"] {
+  
   background-color: var(--accent-color-1);
   color: var(--light-text-color);
   cursor: pointer;
-  padding: var(--spacing-small);
   border: none;
   border-radius: var(--border-radius);
   font-weight: bold;
   font-size: var(--button-font-size);
-  width: 100%;
+  transition: all 0.3s ease;
+  padding: 20px;
+
 }
 
 
