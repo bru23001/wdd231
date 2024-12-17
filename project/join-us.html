@@ -28,9 +28,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
 
 </head>
@@ -61,97 +61,105 @@
     </header>
 
     <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>Let's Start Your Journey</h1>
-                <p>
-                    Ready to dive into a world of books? Join our community and
-                    connect
-                    with fellow book enthusiasts.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#signup-form" class="button button-primary">Sign Up
-                        Now</a>
-                    <a href="#contact-form"
-                        class="button button-secondary">Contact Us</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-section">
+        <section class="hero-join">
             <div class="container">
-                <div class="monthly-pick-header">
-                    <h2 class="agdasima-bold">Get in Touch</h2>
+                <div class="hero-content">
+                    <h1>Join Our Reading Community</h1>
+                    <p>Connect with fellow book lovers and start your literary
+                        journey today</p>
                 </div>
-
-                <p>If you have any questions, feedback, or suggestions, please
-                    feel free to contact us using the form below.</p>
-
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="subject">Choose a Subject:</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Please select a subject</option>
-                            <option value="book-recommendation">Book
-                                Recommendation</option>
-                            <option value="club-membership">Club Membership
-                            </option>
-                            <option value="event-inquiry">Event Inquiry</option>
-                            <option value="feedback">Feedback</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contact-name">Name:</label>
-                        <input type="text" id="contact-name" name="name"
-                            required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contact-email">Email:</label>
-                        <input type="email" id="contact-email" name="email"
-                            placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message"
-                            required></textarea>
-                    </div>
-
-                    <button type="submit" class="cta-button-1">Submit</button>
-                </form>
             </div>
         </section>
 
-
-
-
-        <section class="newsletter-section">
-            <div class="newsletter-content">
-                <h3>Join Our Reading Community</h3>
-                <p>Get weekly book recommendations and stay updated with the latest literary news.</p>
-                <form class="newsletter-form" id="newsletter-form">
-                    <div class="input-container">
-                        <label for="newsletter-email">Email Address</label>
-                        <div class="input-field">
-                            <input 
-                                type="email" 
-                                id="newsletter-email" 
-                                name="newsletter-email" 
-                                placeholder="Enter your email address" 
-                                aria-label="Email address for newsletter subscription" 
-                                required
-                            >
-                            <button type="submit" class="cta-button-1">
-                                Subscribe
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
+        <section class="join-section">
+            <div class="container">
+                <div class="join-grid">
+                    <div class="join-benefits">
+                        <h2>Why Join Us?</h2>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <i class="fas fa-book-reader"></i>
+                                <h3>Access to Book Collections</h3>
+                                <p>Discover curated reading lists and
+                                    personalized recommendations</p>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-users"></i>
+                                <h3>Join Book Clubs</h3>
+                                <p>Connect with readers who share your literary
+                                    interests</p>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-comments"></i>
+                                <h3>Engage in Discussions</h3>
+                                <p>Share your thoughts and participate in
+                                    meaningful conversations</p>
+                            </div>
                         </div>
-                        <span class="error-message" role="alert"></span>
                     </div>
-                </form>
+
+                    <div class="join-form-container">
+                        <form class="join-form" id="signup-form">
+                            <h2>Create Your Account</h2>
+
+                            <div class="form-group">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" name="fullname"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password"
+                                    name="password" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reading-preferences">Favorite
+                                    Genres</label>
+                                <select id="reading-preferences"
+                                    name="reading-preferences" multiple>
+                                    <option value="fiction">Fiction</option>
+                                    <option value="mystery">Mystery</option>
+                                    <option value="scifi">Science Fiction
+                                    </option>
+                                    <option value="romance">Romance</option>
+                                    <option value="nonfiction">Non-Fiction
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter"
+                                        checked>
+                                    <span>Subscribe to our newsletter</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms"
+                                        required>
+                                    <span>I agree to the <a href="#">Terms &
+                                            Conditions</a></span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="submit-button">Create
+                                Account</button>
+
+                            <p class="login-prompt">Already have an account? <a
+                                    href="login.html">Sign in</a></p>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
