@@ -60,96 +60,58 @@
     </header>
 
 
-    <main>
-        <section class="hero-section">
-            <div class="hero-content">
+    <main class="login-section">
+        <div class="login-container">
+            <form class="login-form" action="/login" method="post">
                 <h1>Welcome Back</h1>
-                <p>
-                    Sign in to access your personalized reading lists, join
-                    discussions,
-                    and connect with your book club.
-                </p>
-                <div class="hero-buttons">
-                    
-                    <a href="join-us.html"
-                        class="button button-secondary">Create Account</a>
-                </div>
-            </div>
-        </section>
-
-        
-        <section class="content-section">
-            <div class="container">
-                <div class="form-container text-center monthly-pick-header">
-                    <h2>Log In to Your Account</h2>
-
-                    <form class="form-group" action="/login" method="post">
-                        <div class="form-group">
-                            <label for="login-email">Email</label>
-                            <input 
-                                type="email" 
-                                id="login-email" 
-                                name="email"
-                                required 
-                                placeholder="Enter your email"
-                                aria-label="Email input field"
-                            >
-                        </div>
-
-                        <div class="form-group">
-                            <label for="login-password">Password</label>
-                            <input 
-                                type="password" 
-                                id="login-password"
-                                name="password" 
-                                required
-                                placeholder="Enter your password"
-                                aria-label="Password input field"
-                            >
-                        </div>
-                        <div class="form-group checkbox-group">
-                            <label for="remember-me" class="checkbox-label">
-                                <input type="checkbox" id="remember-me"
-                                    name="remember">
-                                <span class="checkbox-text">Remember me</span>
-                            </label>
-                        </div>
-
-                        <button type="submit" class="cta-button-1">Log
-                            In</button>
-
-                        <div class="form-links">
-                            <a href="#" class="text-link">Forgot Password?</a>
-                            <a href="#" class="text-link">Create New Account</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <section class="newsletter-section">
-            <div class="newsletter-content">
-                <h3>Join Our Reading Community</h3>
-                <p>Get weekly book recommendations and stay updated with the
-                    latest literary news.</p>
-                <form class="newsletter-form" id="newsletter-form">
-                    <div class="input-container">
-                        <label for="newsletter-email">Email Address</label>
-                        <div class="input-field">
-                            <input type="email" id="newsletter-email"
-                                name="newsletter-email"
-                                placeholder="Enter your email address"
-                                aria-label="Email address for newsletter subscription"
-                                required>
-                            <button type="submit" class="cta-button-1">
-                                Subscribe
-                                <em class="fas fa-arrow-right" aria-hidden="true"></em>                            </button>
-                        </div>
-                        <span class="error-message" role="alert"></span>
+                <p class="subtitle">Sign in to access your reading lists and join discussions</p>
+                
+                <div class="form-group">
+                    <label for="email" class="visually-hidden">Email</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     </div>
-                </form>
-            </div>
-        </section>
+                </div>
+    
+                <div class="form-group">
+                    <label for="password" class="visually-hidden">Password</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                </div>
+    
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+    
+                <button type="submit" class="sign-in-button">Sign In</button>
+    
+                <div class="divider">
+                    <span>Or continue with</span>
+                </div>
+    
+                <div class="social-login">
+                    <button type="button" class="social-button google">
+                        <i class="fab fa-google"></i>
+                        <span>Google</span>
+                    </button>
+                    <button type="button" class="social-button facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </button>
+                </div>
+    
+                <p class="signup-prompt">
+                    Don't have an account? <a href="/signup">Create one</a>
+                </p>
+            </form>
+        </div>
     </main>
 
     <footer>
