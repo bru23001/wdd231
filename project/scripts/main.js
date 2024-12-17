@@ -26,8 +26,8 @@ function initializeApp() {
     setupModalHandling();
     updateFooter();
     initializeFavorites();
+    setupAccessibility();
 }
-
 
 // Setup navigation functionality
 
