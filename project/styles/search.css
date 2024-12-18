@@ -50,10 +50,28 @@
 
 .advanced-filters {
     display: grid;
+  
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--spacing-medium);
     margin-top: var(--spacing-medium);
 }
+
+.filters-row {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+   
+}
+
+.select-filter {
+    width: 25%;
+    padding: var(--spacing-sm);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--surface-color);
+}
+
 
 .price-range {
     display: flex;

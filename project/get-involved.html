@@ -60,103 +60,136 @@
         </div>
     </header>
     <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>Join the Reading Revolution</h1>
-                <p>
-                    Find local book clubs, start discussions, and connect with
-                    readers
-                    who share your passion for great stories.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#find-club" class="button button-primary">Find a
-                        Book Club</a>
-                    <a href="#start-club" class="button button-secondary">Start
-                        Your Own</a>
+        <section class="hero-get-involved">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Join the Reading Revolution</h1>
+                    <p>
+                        Find local book clubs, start discussions, and connect
+                        with
+                        readers
+                        who share your passion for great stories.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#find-club" class="button button-primary">Find
+                            a
+                            Book Club</a>
+                        <a href="#start-club"
+                            class="button button-secondary">Start
+                            Your Own</a>
+
+                    </div>
                 </div>
             </div>
         </section>
 
 
 
-        <section class="find-clubs-section">
-            <div class="container">
-                <h1>Book Clubs Near You</h1>
-
-                <div class="search-container">
-                    <div class="search-group">
-                        <div class="input-wrapper">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <input type="text" id="location"
-                                placeholder="Enter your location" required>
-                        </div>
-
-                        <div class="filters-row">
-                            <select class="select-filter" id="distance">
-                                <option value="" disabled selected>Search Radius
-                                </option>
-                                <option value="5">Within 5 miles</option>
-                                <option value="10">Within 10 miles</option>
-                                <option value="25">Within 25 miles</option>
-                                <option value="50">Within 50 miles</option>
-                            </select>
-
-                            <select class="select-filter" id="genre">
-                                <option value="" disabled selected>Book Genre
-                                </option>
-                                <option value="fiction">Fiction</option>
-                                <option value="mystery">Mystery & Thriller
-                                </option>
-                                <option value="scifi">Science Fiction</option>
-                                <option value="romance">Romance</option>
-                                <option value="nonfiction">Non-Fiction</option>
-                            </select>
-                        </div>
-
-                        <button class="search-button">
-                            <i class="fas fa-search"></i>
-                            Find Book Clubs
-                        </button>
-                    </div>
+        <section class="content-section">
+            <div class="club-search-container search-group">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" id="location"
+                        placeholder="Enter your location to find nearby book clubs"
+                        required>
                 </div>
 
-                <div class="clubs-grid">
-                    <div class="club-card">
-                        <h3>Downtown Readers</h3>
-                        <div class="club-details">
-                            <p><i class="fas fa-map-marker-alt"></i> Central
-                                Library, Main St</p>
-                            <p><i class="fas fa-book"></i> Currently Reading:
-                                "Society of Lies"</p>
-                            <p><i class="fas fa-clock"></i> Meets every Tuesday
-                                at 6 PM</p>
+                <div class="filters-row">
+                    <select id="distance" class="select-filter">
+                        <option value="">Search Radius</option>
+                        <option value="5">Within 5 miles</option>
+                        <option value="10">Within 10 miles</option>
+                        <option value="25">Within 25 miles</option>
+                        <option value="50">Within 50 miles</option>
+                    </select>
+
+                    <select id="genre" class="select-filter">
+                        <option value="">All Genres</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Mystery">Mystery & Thriller</option>
+                        <option value="SciFi">Science Fiction</option>
+                        <option value="Romance">Romance</option>
+                        <option value="NonFiction">Non-Fiction</option>
+                    </select>
+                    <button class="search-button">
+                        <i class="fas fa-search"></i>
+                        Find Book Clubs
+                    </button>
+                </div>
+
+            </div>
+
+            <section class="clubs-section">
+                <div class="container">
+                    <div class="clubs-grid">
+                        <div class="club-card">
+                            <div class="club-header">
+                                <h3 class="club-title">Downtown Readers</h3>
+                                <span class="member-count">20 Members</span>
+                            </div>
+                            <div class="club-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Central Library, Main St</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-book"></i>
+                                    <span>Currently Reading: "The Midnight
+                                        Library"</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Meets every Tuesday at 6 PM</span>
+                                </div>
+                            </div>
                             <div class="club-tags">
                                 <span class="tag">Fiction</span>
-                                <span class="tag">20 Members</span>
+                                <span class="tag">Contemporary</span>
+                            </div>
+                            <div class="club-actions">
+                                <button class="search-button">
+                                    <i class="fas fa-users"></i>
+                                    Join Group
+                                </button>
                             </div>
                         </div>
-                        <button class="join-button">Join Group</button>
-                    </div>
+                        <div class="club-card">
+                            <div class="club-header">
+                                <h3 class="club-title">Mistery Lovers Book Club
+                                </h3>
+                                <span class="member-count">15 Members</span>
+                            </div>
 
-                    <div class="club-card">
-                        <h3>Mystery Lovers Book Club</h3>
-                        <div class="club-details">
-                            <p><i class="fas fa-map-marker-alt"></i> Cozy Corner
-                                Café, Oak Ave</p>
-                            <p><i class="fas fa-book"></i> Focus: Mystery &
-                                Thriller</p>
-                            <p><i class="fas fa-clock"></i> Meets monthly -
-                                First Saturday</p>
-                            <div class="club-tags">
-                                <span class="tag">Mystery</span>
-                                <span class="tag">15 Members</span>
+                            <div class="club-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Cozy
+                                        Corner
+                                        Café, Oak Ave</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-book"></i>
+                                    <span>Currently Reading: "Mistery at the
+                                        Railroad Station"</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Meets monthly -
+                                        First Saturday</span>
+                                </div>
+                                div class="club-tags">
+                                <span class="tag">Mistery</span>
+                                <span class="tag">Thriller</span>
+                            </div>
+                            <div class="club-actions">
+                                <button class="search-button">
+                                    <i class="fas fa-users"></i>
+                                    Join Group
+                                </button>
                             </div>
                         </div>
-                        <button class="join-button">Join Group</button>
                     </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
         <section class="newsletter-section">
             <div class="newsletter-content">

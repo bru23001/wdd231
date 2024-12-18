@@ -21,6 +21,10 @@
     gap: var(--spacing-medium);
 }
 
+body {
+    background: var(--surface-color);
+}
+
 
 
 

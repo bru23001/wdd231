@@ -41,14 +41,16 @@
                 <img src="images/bookclub.webp" alt="Your Book Club Logo">
             </div>
             <nav>
-                <ul class="nav-links">
+                <ul>
                     <li><a href="siteplan.html" class="active">Home</a></li>
                     <li><a href="about-us.html">About Us</a></li>
                     <li><a href="get-involved.html">Get Involved</a></li>
                     <li><a href="join-us.html">Contact</a></li>
-                    <li class="nav-buttons">
-                        <a href="join-us.html" class="cta-button-1">Join Now</a>
-                        <a href="login.html" class="cta-button-2">Log in</a>
+                    <li>
+                        <a href="join-us.html"
+                            class="button button-primary">Join Now</a>
+                        <a href="login.html" class="button button-secondary">Log
+                            in</a>
                     </li>
                 </ul>
                 <button id="menu" class="menu-button"
@@ -61,105 +63,93 @@
         <section class="hero-section">
             <div class="container">
                 <div class="hero-content">
-                    <h1>
-                        Your Literary Journey
-                        <span class="highlight">Starts Here</span>
-                    </h1>
-                    <p>
-                        Join a vibrant community of book lovers. Discover new
-                        stories,
-                        share your thoughts, and connect with fellow readers.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="join-us.html" class="cta-button-1">Get
+                    <h1>Your Literary Journey <span>Starts Here</span></h1>
+                    <p>Join a vibrant community of book lovers. Discover new
+                        stories, share your thoughts, and connect with fellow
+                        readers.</p>
+                    <div class="hero-actions">
+                        <a href="#" class="button button-primary">Get
                             Started</a>
-                        <a href="must-reads.html" class="cta-button-2">Explore
+                        <a href="#" class="button button-secondary">Explore
                             Books</a>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">50K+</div>
-                            <div class="stat-label">Active Readers</div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Active Readers</span>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">1000+</div>
-                            <div class="stat-label">Book Clubs</div>
+                        <div class="stat-card">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Book Clubs</span>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100K+</div>
-                            <div class="stat-label">Books</div>
+                        <div class="stat-card">
+                            <span class="stat-number">100K+</span>
+                            <span class="stat-label">Books</span>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">4.9</div>
-                            <div class="stat-label">User Rating</div>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="monthly-pick" class="content-section monthly-pick">
+        <section class="monthly-book-section">
             <div class="container">
-                <div class="monthly-pick-header">
-                    <h2>Book of the Month</h2>
-                </div>
-                <div class="content-grid">
-                    <div class="book-card featured-book">
-                        <div class="book-cover">
-                            <img src="images/monthly-pick800x1200.webp"
-                                alt="Tell Me Everything by Elizabeth Strouth"
-                                loading="lazy">
-                            <span class="category-tag">Literary Fiction</span>
-                            <div class="quick-actions">
-                                <button class="action-button"
-                                    aria-label="Add to favorites">
-                                    <em class="fas fa-heart"
-                                        aria-hidden="true"></em>
-                                </button>
-                                <button class="action-button"
-                                    aria-label="Add to reading list">
-                                    <em class="fas fa-bookmark"
-                                        aria-hidden="true"></em>
-                                </button>
-                                <button class="action-button"
-                                    aria-label="Share">
-                                    <em class="fas fa-share-alt"
-                                        aria-hidden="true"></em>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="book-content">
-                            <h3>Tell Me Everything</h3>
-                            <p class="author">Elizabeth Strouth</p>
-                            <div class="star-rating">
-                                <span style="width: 83%;"></span>
-                            </div>
-                            <p class="description">From Pulitzer Prize–winning
-                                author Elizabeth Strout comes a "generous,
-                                compassionate novel" (San Francisco Chronicle)
-                                about new friendships, old loves, and the very
-                                human desire to leave a mark on the world.</p>
-                            <div class="book-actions">
-                                <a href="monthly-pick.html"
-                                    class="cta-button-1">Discover the Pick</a>
-                            </div>
+                <h2>Book of the Month</h2>
+                <div class="featured-book">
+                    <div class="book-image">
+                        <img src="images/monthly-pick800x1200.webp"
+                            alt="Tell Me Everything">
+                        <span class="genre-tag">Literary Fiction</span>
+                        <div class="quick-actions">
+                            <button class="action-button"
+                                aria-label="Add to favorites">
+                                <em class="fas fa-heart"
+                                    aria-hidden="true"></em>
+                            </button>
+                            <button class="action-button"
+                                aria-label="Add to reading list">
+                                <em class="fas fa-bookmark"
+                                    aria-hidden="true"></em>
+                            </button>
+                            <button class="action-button"
+                                aria-label="Share">
+                                <em class="fas fa-share-alt"
+                                    aria-hidden="true"></em>
+                            </button>
                         </div>
                     </div>
+
+                    <div class="book-info">
+                        <h3>Tell Me Everything</h3>
+                        <p class="author">Elizabeth Strouth</p>
+                        <div class="rating">★★★★★</div>
+                        <p class="description">From Pulitzer Prize–winning
+                            author
+                            Elizabeth Strout comes a "generous, compassionate
+                            novel"
+                            about new friendships, old loves, and the very human
+                            desire to leave a mark on the world.</p>
+                        <div class="book-actions">
+                            <a href="monthly-pick.html"
+                                class="button button-secondary">Discover
+                                the Pick</a>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="featured-books">
             <div class="container">
-                <div class="monthly-pick-header">
-                    <h2>Featured Books</h2>
-                </div>
-                <div class="content-grid">
+                <h2>Featured Books</h2>
+                <div class="books-grid">
                     <div class="book-card">
-                        <div class="book-cover">
+                        <div class="book-image">
                             <img src="images/book1-400x600.webp"
                                 alt="The Waiting" loading="lazy">
-                            <span class="category-tag">Mystery</span>
+                            <span class="genre-tag">Mystery</span>
                             <div class="quick-actions">
                                 <button class="action-button"
                                     aria-label="Add to favorites">
@@ -190,28 +180,32 @@
                                 Michael Connelly.</p>
                             <div class="book-actions">
                                 <a href="must-reads.html"
-                                    class="cta-button-1">Learn More</a>
+                                    class="button button-secondary">Learn
+                                    More</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="book-card">
-                        <div class="book-cover">
+                        <div class="book-image">
                             <img src="images/book2-400x600.webp"
                                 alt="Identity Unknown" loading="lazy">
-                            <span class="category-tag">Thriller</span>
+                            <span class="genre-tag">Thriller</span>
                             <div class="quick-actions">
                                 <button class="action-button"
                                     aria-label="Add to favorites">
-                                    <em class="fas fa-heart" aria-hidden="true"></em>
+                                    <em class="fas fa-heart"
+                                        aria-hidden="true"></em>
                                 </button>
                                 <button class="action-button"
                                     aria-label="Add to reading list">
-                                    <em class="fas fa-bookmark" aria-hidden="true"></em>
+                                    <em class="fas fa-bookmark"
+                                        aria-hidden="true"></em>
                                 </button>
                                 <button class="action-button"
                                     aria-label="Share">
-                                    <em class="fas fa-share-alt" aria-hidden="true"></em>
+                                    <em class="fas fa-share-alt"
+                                        aria-hidden="true"></em>
                                 </button>
                             </div>
                         </div>
@@ -226,28 +220,32 @@
                                 is no ordinary murder mystery...</p>
                             <div class="book-actions">
                                 <a href="must-reads.html"
-                                    class="cta-button-1">Learn More</a>
+                                    class="button button-secondary">Learn
+                                    More</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="book-card">
-                        <div class="book-cover">
+                        <div class="book-image">
                             <img src="images/book3-400x600.webp"
                                 alt="Intermezzo" loading="lazy">
-                            <span class="category-tag">Romance</span>
+                            <span class="genre-tag">Romance</span>
                             <div class="quick-actions">
                                 <button class="action-button"
                                     aria-label="Add to favorites">
-                                    <em class="fas fa-heart" aria-hidden="true"></em>
+                                    <em class="fas fa-heart"
+                                        aria-hidden="true"></em>
                                 </button>
                                 <button class="action-button"
                                     aria-label="Add to reading list">
-                                    <em class="fas fa-bookmark" aria-hidden="true"></em>
+                                    <em class="fas fa-bookmark"
+                                        aria-hidden="true"></em>
                                 </button>
                                 <button class="action-button"
                                     aria-label="Share">
-                                    <em class="fas fa-share-alt" aria-hidden="true"></em>
+                                    <em class="fas fa-share-alt"
+                                        aria-hidden="true"></em>
                                 </button>
                             </div>
                         </div>
@@ -266,7 +264,8 @@
                                 enough of from a literary icon.</p>
                             <div class="book-actions">
                                 <a href="must-reads.html"
-                                    class="cta-button-1">Learn More</a>
+                                    class="button button-secondary">Learn
+                                    More</a>
                             </div>
                         </div>
                     </div>
@@ -274,18 +273,7 @@
             </div>
         </section>
 
-        <section class="content-section">
-            <div class="container">
-                <div class="monthly-pick-header">
-                    <h2>Join the Club</h2>
-                    <p>Connect with readers, join discussions, and find your
-                        next favorite book.</p>
-                    <div class="cta-container">
-                        <a href="join-us.html" class="cta-button-1">Join Now</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <section class="newsletter-section">
             <div class="newsletter-content">
@@ -303,7 +291,8 @@
                                 required>
                             <button type="submit" class="cta-button-1">
                                 Subscribe
-                                <em class="fas fa-arrow-right" aria-hidden="true"></em>
+                                <em class="fas fa-arrow-right"
+                                    aria-hidden="true"></em>
 
                             </button>
                         </div>
@@ -338,7 +327,8 @@
                 <div class="modal-footer">
                     <button class="cta-button-1" id="add-to-cart">Add to
                         Cart</button>
-                    <button class="cta-button-2 close-modal">Close</button>
+                    <button
+                        class="button button-secondary close-modal">Close</button>
                 </div>
             </div>
         </dialog>
